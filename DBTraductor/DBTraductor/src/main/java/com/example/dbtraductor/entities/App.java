@@ -31,10 +31,6 @@ public class App {
     @JoinColumn(name ="idRol")
     private Rol idRol;
 
-    /*@Column(name = "rolid", nullable = false)
-    private int rolid;*/
-
-
 
 
     public App(int idApp, String nombre, int telefono, LocalDate fechaNacimiento, String email, String password,Rol idRol/* int rolid*/  ) {
@@ -107,13 +103,4 @@ public class App {
         this.idRol = idRol;
     }
 
-  /*
-    public int getRolid() {
-        return rolid;
-    }
-
-    public void setRolid(int rolid) {
-        this.rolid = rolid;
-    }
-    */
 }
