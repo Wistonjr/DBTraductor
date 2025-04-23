@@ -6,27 +6,32 @@ import java.time.LocalDate;
 @Entity
 @Table(name="feedback")
 public class FeedBack {
-    @id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idFeedBack;
-    @Column(name = "comentario", nullable = false, length = 300)
+    @Column(name = "comentario", nullable = false, length = 400)
     private String comentario;
     @Column(name = "calificacion", nullable = false)
     private int calificacion;
     @Column(name = "fecha", nullable = false)
     private LocalDate fecha;
+    @ManyToOne
+    @JoinColumn(name ="idUsuario")
+    private Usuario idUsuario;
+    @ManyToOne
+    @JoinColumn(name ="idTraduccion")
+    private Traduccion idTraduccion;
 
+    public FeedBack() {
+    }
 
-
-    public FeedBack(int idFeedBack, String comentario, int calificacion, LocalDate fecha) {
+    public FeedBack(int idFeedBack, String comentario, int calificacion, LocalDate fecha, Usuario idUsuario, Traduccion idTraduccion) {
         this.idFeedBack = idFeedBack;
         this.comentario = comentario;
         this.calificacion = calificacion;
         this.fecha = fecha;
-    }
-
-    public FeedBack() {
-
+        this.idUsuario = idUsuario;
+        this.idTraduccion = idTraduccion;
     }
 
     public int getIdFeedBack() {
@@ -59,5 +64,21 @@ public class FeedBack {
 
     public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
+    }
+
+    public Usuario getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Usuario idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public Traduccion getIdTraduccion() {
+        return idTraduccion;
+    }
+
+    public void setIdTraduccion(Traduccion idTraduccion) {
+        this.idTraduccion = idTraduccion;
     }
 }
