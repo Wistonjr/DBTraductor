@@ -12,21 +12,21 @@ import java.util.List;
 public class UsuarioServiceImplement implements IUsuarioService {
 
     @Autowired
-    private IUsuarioRepository Re;
+    private IUsuarioRepository re;
 
     @Override
-    public List<Usuario> list() { return Re.findAll();}
+    public List<Usuario> list() { return re.findAll();}
 
     @Override
-    public void insert(Usuario a) {Re.save(a);}
+    public void insert(Usuario a) {re.save(a);}
 
     @Override
-    public Usuario searchId(int id) { return Re.findById(id).orElse(new Usuario());}
+    public Usuario searchId(int id) { return re.findById(id).orElse(new Usuario());}
 
     @Override
-    public void update(Usuario a) {Re.save(a);}
+    public void update(Usuario a) {re.save(a);}
 
     @Override
-    public void delete(int id) {Re.deleteById(id);}
+    public void delete(int id) {re.deleteById(id);}
 
 }

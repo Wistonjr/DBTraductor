@@ -31,7 +31,6 @@ public class UsuarioController {
         uS.insert(a);
     }
 
-    /*search id */
     @GetMapping("/{id}")
     public UsuarioDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
