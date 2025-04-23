@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuario")
+//prueba de push a mi branch wiston
 public class UsuarioController {
     @Autowired
     private IUsuarioService uS;
