@@ -7,12 +7,15 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+//borrar lo de abajo
+import org.springframework.web.multipart.MultipartFile;
+
 import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/usuario")
-//prueba de push a mi branch wiston
+
 public class UsuarioController {
     @Autowired
     private IUsuarioService uS;
