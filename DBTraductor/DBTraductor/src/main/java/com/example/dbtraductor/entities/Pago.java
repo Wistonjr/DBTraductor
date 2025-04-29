@@ -1,6 +1,8 @@
 package com.example.dbtraductor.entities;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity
@@ -24,6 +26,10 @@ public class Pago {
         this.metodoPago = metodoPago;
         this.fechaPago = fechaPago;
         this.estadoPago = estadoPago;
+    }
+
+    public Pago() {
+
     }
 
     public int getIdPago() {

@@ -1,6 +1,8 @@
 package com.example.dbtraductor.entities;
 
-import javax.persistence.*;
+
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 
 @Entity
@@ -27,6 +29,10 @@ public class Suscripcion {
         this.fechaInicioSuscripcion = fechaInicioSuscripcion;
         this.fechaFinSuscripcion = fechaFinSuscripcion;
         this.historialSuscripcion = historialSuscripcion;
+    }
+
+    public Suscripcion() {
+
     }
 
     public int getIdSuscripcion() {
