@@ -18,4 +18,21 @@ public class PagoServiceImplement implements IPagoService {
     public List<Pago> list() {
         return pR.findAll();
     }
+
+    @Override
+    public void insert(Pago p) {
+        pR.save(p);
+    }
+
+    @Override
+    public void update(Pago p) {
+        pR.save(p);
+    }
+
+    @Override
+    public void delete(int id) {
+        pR.deleteById(id);
+    }
+
+
 }
