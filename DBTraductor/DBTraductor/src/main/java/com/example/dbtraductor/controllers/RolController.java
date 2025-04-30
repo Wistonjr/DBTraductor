@@ -32,7 +32,7 @@ public class RolController {
         Rol l= m.map(dto, Rol.class);
         rS.insert(l);
     }
-//prueba22
+//subido al main
     @GetMapping("/usuarios")
     public List<RolDto> ListarCantidadModeradores(){
         List<String[]> filaLista=rS.QuantityModeradoresByApp();
