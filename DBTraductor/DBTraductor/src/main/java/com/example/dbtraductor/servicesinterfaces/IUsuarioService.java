@@ -10,4 +10,5 @@ public interface IUsuarioService{
     public Usuario searchId(int id);
     public void update (Usuario a);
     public void delete (int id);
+    public List<String[]> RolesUsuarios();
 }

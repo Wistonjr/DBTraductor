@@ -29,4 +29,8 @@ public class UsuarioServiceImplement implements IUsuarioService {
     @Override
     public void delete(int id) {re.deleteById(id);}
 
+    @Override
+    public List<String[]> RolesUsuarios() {return re.RolesUsuarios();
+    }
+
 }

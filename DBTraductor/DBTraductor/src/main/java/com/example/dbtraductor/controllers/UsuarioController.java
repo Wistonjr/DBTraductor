@@ -1,5 +1,6 @@
 package com.example.dbtraductor.controllers;
 
+import com.example.dbtraductor.dtos.RolesUsuariosDTO;
 import com.example.dbtraductor.dtos.UsuarioDto;
 import com.example.dbtraductor.entities.Usuario;
 import com.example.dbtraductor.servicesinterfaces.IUsuarioService;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 //prueba 3
 import org.springframework.web.multipart.MultipartFile;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -53,4 +55,17 @@ public class UsuarioController {
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {uS.delete(id);}
+
+    @GetMapping("/roles")
+    public List<RolesUsuariosDTO>  RolesUsuarios(){
+        List<String[]>filaLista = uS.RolesUsuarios();
+        List<RolesUsuariosDTO> dtoRoles = new ArrayList<>();
+        for (String[] columna : filaLista) {
+            RolesUsuariosDTO dto = new RolesUsuariosDTO();
+            dto.setNombre(columna[0]);
+            dto.setRolName((columna[1]));
+            dtoRoles.add(dto);
+        }
+        return dtoRoles;
+    }
 }
