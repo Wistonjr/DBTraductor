@@ -1,16 +1,20 @@
 package com.example.dbtraductor.dtos;
 
-import com.example.dbtraductor.entities.Suscripcion;
+
 
 import java.time.LocalDate;
 
 public class PagoDto {
+
     private int idPago;
+    
     private float monto;
+
     private String metodo;
+
     private LocalDate fechaPago;
+
     private String estado;
-    private Suscripcion idSuscripcion;
 
     public int getIdPago() {
         return idPago;
@@ -50,13 +54,5 @@ public class PagoDto {
 
     public void setEstado(String estado) {
         this.estado = estado;
-    }
-
-    public Suscripcion getIdSuscripcion() {
-        return idSuscripcion;
-    }
-
-    public void setIdSuscripcion(Suscripcion idSuscripcion) {
-        this.idSuscripcion = idSuscripcion;
     }
 }

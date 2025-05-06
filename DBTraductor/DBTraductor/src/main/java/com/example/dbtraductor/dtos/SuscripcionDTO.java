@@ -1,13 +1,17 @@
 package com.example.dbtraductor.dtos;
+
+import com.example.dbtraductor.entities.Usuario;
+
 import java.time.LocalDate;
 
-public class SuscripcionDTO {
+public class SuscripcionDto {
     private int idSuscripcion;
-    private String nombreSuscripcion;
-    private String estadoSuscripcion;
-    private LocalDate fechaInicioSuscripcion;
-    private LocalDate fechaFinSuscripcion;
-    private String historialSuscripcion;
+    private String tipo;
+    private String estado;
+    private LocalDate fechaInicio;
+    private LocalDate fechaFin;
+    private String historial;
+    private Usuario idUsuario;
 
     public int getIdSuscripcion() {
         return idSuscripcion;
@@ -17,43 +21,51 @@ public class SuscripcionDTO {
         this.idSuscripcion = idSuscripcion;
     }
 
-    public String getNombreSuscripcion() {
-        return nombreSuscripcion;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setNombreSuscripcion(String nombreSuscripcion) {
-        this.nombreSuscripcion = nombreSuscripcion;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getEstadoSuscripcion() {
-        return estadoSuscripcion;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setEstadoSuscripcion(String estadoSuscripcion) {
-        this.estadoSuscripcion = estadoSuscripcion;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public LocalDate getFechaInicioSuscripcion() {
-        return fechaInicioSuscripcion;
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
     }
 
-    public void setFechaInicioSuscripcion(LocalDate fechaInicioSuscripcion) {
-        this.fechaInicioSuscripcion = fechaInicioSuscripcion;
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
     }
 
-    public LocalDate getFechaFinSuscripcion() {
-        return fechaFinSuscripcion;
+    public LocalDate getFechaFin() {
+        return fechaFin;
     }
 
-    public void setFechaFinSuscripcion(LocalDate fechaFinSuscripcion) {
-        this.fechaFinSuscripcion = fechaFinSuscripcion;
+    public void setFechaFin(LocalDate fechaFin) {
+        this.fechaFin = fechaFin;
     }
 
-    public String getHistorialSuscripcion() {
-        return historialSuscripcion;
+    public String getHistorial() {
+        return historial;
     }
 
-    public void setHistorialSuscripcion(String historialSuscripcion) {
-        this.historialSuscripcion = historialSuscripcion;
+    public void setHistorial(String historial) {
+        this.historial = historial;
+    }
+
+    public Usuario getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Usuario idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }
