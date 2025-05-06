@@ -1,34 +1,36 @@
 package com.example.dbtraductor.entities;
 
-
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-
 @Entity
-@Table(name="Suscripcion")
+@Table(name="suscripcion")
 public class Suscripcion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idSuscripcion;
-    @Column (name="nombreSuscripcion", nullable=false, length=20)
-    private String nombreSuscripcion;
-    @Column (name="estadoSuscripion", nullable=false, length=20)
-    private String estadoSuscripcion;
-    @Column (name="fechaInicioSuscripcion", nullable=false)
-    private LocalDate fechaInicioSuscripcion;
-    @Column (name="fechaFinSuscripcion", nullable=false)
-    private LocalDate fechaFinSuscripcion;
-    @Column (name="historialSuscripcion", nullable=false, length=20)
-    private String historialSuscripcion;
+    @Column(name="tipo", nullable=false,length=20)
+    private String tipo;
+    @Column(name="estado", nullable=false,length=20)
+    private String estado;
+    @Column(name="fechaInicio", nullable=false)
+    private LocalDate fechaInicio;
+    @Column(name="fechaFin", nullable=false)
+    private LocalDate fechaFin;
+    @Column(name="historial", nullable=false,length=50)
+    private String historial;
+    @ManyToOne
+    @JoinColumn(name ="idUsuario")
+    private Usuario idUsuario;
 
-    public Suscripcion(int idSuscripcion, String nombreSuscripcion, String estadoSuscripcion, LocalDate fechaInicioSuscripcion, LocalDate fechaFinSuscripcion, String historialSuscripcion) {
+    public Suscripcion(int idSuscripcion, String tipo, String estado, LocalDate fechaInicio, LocalDate fechaFin, String historial, Usuario idUsuario) {
         this.idSuscripcion = idSuscripcion;
-        this.nombreSuscripcion = nombreSuscripcion;
-        this.estadoSuscripcion = estadoSuscripcion;
-        this.fechaInicioSuscripcion = fechaInicioSuscripcion;
-        this.fechaFinSuscripcion = fechaFinSuscripcion;
-        this.historialSuscripcion = historialSuscripcion;
+        this.tipo = tipo;
+        this.estado = estado;
+        this.fechaInicio = fechaInicio;
+        this.fechaFin = fechaFin;
+        this.historial = historial;
+        this.idUsuario = idUsuario;
     }
 
     public Suscripcion() {
@@ -43,43 +45,51 @@ public class Suscripcion {
         this.idSuscripcion = idSuscripcion;
     }
 
-    public String getNombreSuscripcion() {
-        return nombreSuscripcion;
+    public String getTipo() {
+        return tipo;
     }
 
-    public void setNombreSuscripcion(String nombreSuscripcion) {
-        this.nombreSuscripcion = nombreSuscripcion;
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
-    public String getEstadoSuscripcion() {
-        return estadoSuscripcion;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setEstadoSuscripcion(String estadoSuscripcion) {
-        this.estadoSuscripcion = estadoSuscripcion;
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
-    public LocalDate getFechaInicioSuscripcion() {
-        return fechaInicioSuscripcion;
+    public LocalDate getFechaInicio() {
+        return fechaInicio;
     }
 
-    public void setFechaInicioSuscripcion(LocalDate fechaInicioSuscripcion) {
-        this.fechaInicioSuscripcion = fechaInicioSuscripcion;
+    public void setFechaInicio(LocalDate fechaInicio) {
+        this.fechaInicio = fechaInicio;
     }
 
-    public LocalDate getFechaFinSuscripcion() {
-        return fechaFinSuscripcion;
+    public LocalDate getFechaFin() {
+        return fechaFin;
     }
 
-    public void setFechaFinSuscripcion(LocalDate fechaFinSuscripcion) {
-        this.fechaFinSuscripcion = fechaFinSuscripcion;
+    public void setFechaFin(LocalDate fechaFin) {
+        this.fechaFin = fechaFin;
     }
 
-    public String getHistorialSuscripcion() {
-        return historialSuscripcion;
+    public String getHistorial() {
+        return historial;
     }
 
-    public void setHistorialSuscripcion(String historialSuscripcion) {
-        this.historialSuscripcion = historialSuscripcion;
+    public void setHistorial(String historial) {
+        this.historial = historial;
+    }
+
+    public Usuario getIdUsuario() {
+        return idUsuario;
+    }
+
+    public void setIdUsuario(Usuario idUsuario) {
+        this.idUsuario = idUsuario;
     }
 }

@@ -2,12 +2,12 @@ package com.example.dbtraductor.controllers;
 
 import com.example.dbtraductor.dtos.RolDto;
 import com.example.dbtraductor.entities.Rol;
-import com.example.dbtraductor.repositories.IRolRepository;
 import com.example.dbtraductor.servicesinterfaces.IRolService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -31,6 +31,20 @@ public class RolController {
         ModelMapper m = new ModelMapper();
         Rol l= m.map(dto, Rol.class);
         rS.insert(l);
+    }
+//subido al main
+    @GetMapping("/usuarios")
+    public List<RolDto> ListarCantidadModeradores(){
+        List<String[]> filaLista=rS.QuantityModeradoresByApp();
+        List<RolDto> dtoLista = new ArrayList<>();
+        for (String[] columna : filaLista) {
+            RolDto dto = new RolDto();
+            dto.setRolName(columna[0]);
+            dto.setIdRol(Integer.parseInt(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+
     }
 
 }

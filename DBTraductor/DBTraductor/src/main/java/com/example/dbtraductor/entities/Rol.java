@@ -3,7 +3,7 @@ package com.example.dbtraductor.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Rol")
+@Table(name="rol")
 public class Rol {
 
     @Id

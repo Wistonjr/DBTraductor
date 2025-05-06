@@ -1,6 +1,5 @@
 package com.example.dbtraductor.controllers;
-
-import com.example.dbtraductor.dtos.PagoDTO;
+import com.example.dbtraductor.dtos.PagoDto;
 import com.example.dbtraductor.entities.Pago;
 import com.example.dbtraductor.servicesinterfaces.IPagoService;
 import org.modelmapper.ModelMapper;
@@ -11,31 +10,41 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/pagos")
+@RequestMapping("/pago")
 public class PagoController {
     @Autowired
-    private IPagoService pS;
+    private IPagoService aS;
+
     @GetMapping
-    public List<PagoDTO> listar() {
-        return pS.list().stream().map(x -> {
+    public List<PagoDto> listar() {
+        return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
-            return m.map(x, PagoDTO.class);
+            return m.map(x, PagoDto.class);
         }).collect(Collectors.toList());
     }
+
     @PostMapping
-    public void insertar(@RequestBody PagoDTO dto) {
+    public void insertar(@RequestBody PagoDto dto) {
         ModelMapper m = new ModelMapper();
-        Pago p = m.map(dto, Pago.class);
-        pS.insert(p);
+        Pago a = m.map(dto, Pago.class);
+        aS.insert(a);
     }
+
+    /*search id */
+    @GetMapping("/{id}")
+    public PagoDto listarId(@PathVariable("id") int id) {
+        ModelMapper m = new ModelMapper();
+        PagoDto dto = m.map(aS.searchId(id), PagoDto.class);
+        return dto;
+    }
+
     @PutMapping
-    public void modificar(@RequestBody PagoDTO dto) {
+    public void modificar(@RequestBody PagoDto dto) {
         ModelMapper m = new ModelMapper();
-        Pago p = m.map(dto, Pago.class);
-        pS.update(p);
+        Pago a = m.map(dto, Pago.class);
+        aS.update(a);
     }
+
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable("id") int id) {
-        pS.delete(id);
-    }
+    public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 }

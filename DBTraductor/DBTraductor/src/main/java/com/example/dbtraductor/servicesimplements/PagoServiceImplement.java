@@ -7,32 +7,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
 public class PagoServiceImplement implements IPagoService {
 
     @Autowired
-    private IPagoRepository pR;
+    private IPagoRepository re;
 
     @Override
     public List<Pago> list() {
-        return pR.findAll();
+        return re.findAll();
     }
 
     @Override
-    public void insert(Pago p) {
-        pR.save(p);
+    public void insert(Pago a) {
+        re.save(a);
     }
 
     @Override
-    public void update(Pago p) {
-        pR.save(p);
+    public Pago searchId(int id) {
+        return re.findById(id).orElse(new Pago());
+    }
+
+    @Override
+    public void update(Pago a) {
+        re.save(a);
     }
 
     @Override
     public void delete(int id) {
-        pR.deleteById(id);
+        re.deleteById(id);
     }
-
-
 }

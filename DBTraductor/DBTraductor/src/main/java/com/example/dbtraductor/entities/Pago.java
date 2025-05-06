@@ -1,31 +1,33 @@
 package com.example.dbtraductor.entities;
 
-
 import jakarta.persistence.*;
 
 import java.time.LocalDate;
-
 @Entity
-@Table(name="Pago")
+@Table(name="pago")
 public class Pago {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idPago;
-    @Column (name="montoPago", nullable=false)
-    private double montoPago;
-    @Column (name="metodoPago", nullable=false, length=10)
-    private String metodoPago;
-    @Column (name="fechaPago", nullable=false)
+    @Column(name="monto", nullable=false,length=20)
+    private float monto;
+    @Column(name="metodo", nullable=false,length=30)
+    private String metodo;
+    @Column(name="fechaPago", nullable=false)
     private LocalDate fechaPago;
-    @Column (name="estadoPago", nullable=false, length=15)
-    private String estadoPago;
+    @Column(name="estado", nullable=false,length=20)
+    private String estado;
+    @ManyToOne
+    @JoinColumn(name ="idSuscripcion")
+    private Suscripcion idSuscripcion;
 
-    public Pago(int idPago, double montoPago, String metodoPago, LocalDate fechaPago, String estadoPago) {
+    public Pago(int idPago, float monto, String metodo, LocalDate fechaPago, String estado, Suscripcion idSuscripcion) {
         this.idPago = idPago;
-        this.montoPago = montoPago;
-        this.metodoPago = metodoPago;
+        this.monto = monto;
+        this.metodo = metodo;
         this.fechaPago = fechaPago;
-        this.estadoPago = estadoPago;
+        this.estado = estado;
+        this.idSuscripcion = idSuscripcion;
     }
 
     public Pago() {
@@ -40,20 +42,20 @@ public class Pago {
         this.idPago = idPago;
     }
 
-    public double getMontoPago() {
-        return montoPago;
+    public float getMonto() {
+        return monto;
     }
 
-    public void setMontoPago(double montoPago) {
-        this.montoPago = montoPago;
+    public void setMonto(float monto) {
+        this.monto = monto;
     }
 
-    public String getMetodoPago() {
-        return metodoPago;
+    public String getMetodo() {
+        return metodo;
     }
 
-    public void setMetodoPago(String metodoPago) {
-        this.metodoPago = metodoPago;
+    public void setMetodo(String metodo) {
+        this.metodo = metodo;
     }
 
     public LocalDate getFechaPago() {
@@ -64,11 +66,19 @@ public class Pago {
         this.fechaPago = fechaPago;
     }
 
-    public String getEstadoPago() {
-        return estadoPago;
+    public String getEstado() {
+        return estado;
     }
 
-    public void setEstadoPago(String estadoPago) {
-        this.estadoPago = estadoPago;
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public Suscripcion getIdSuscripcion() {
+        return idSuscripcion;
+    }
+
+    public void setIdSuscripcion(Suscripcion idSuscripcion) {
+        this.idSuscripcion = idSuscripcion;
     }
 }

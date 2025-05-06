@@ -1,8 +1,6 @@
 package com.example.dbtraductor.controllers;
 
-import com.example.dbtraductor.dtos.PagoDTO;
-import com.example.dbtraductor.dtos.SuscripcionDTO;
-import com.example.dbtraductor.entities.Pago;
+import com.example.dbtraductor.dtos.SuscripcionDto;
 import com.example.dbtraductor.entities.Suscripcion;
 import com.example.dbtraductor.servicesinterfaces.ISuscripcionService;
 import org.modelmapper.ModelMapper;
@@ -13,32 +11,39 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/suscripciones")
+@RequestMapping("/suscripcion")
 public class SuscripcionController {
     @Autowired
-    private ISuscripcionService sS;
+    private ISuscripcionService aS;
+
     @GetMapping
-    public List<SuscripcionDTO> listar() {
-        return sS.list().stream().map(x -> {
+    public List<SuscripcionDto> listar() {
+        return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
-            return m.map(x, SuscripcionDTO.class);
+            return m.map(x, SuscripcionDto.class);
         }).collect(Collectors.toList());
     }
+
     @PostMapping
-    public void insertar(@RequestBody SuscripcionDTO dto) {
+    public void insertar(@RequestBody SuscripcionDto dto) {
         ModelMapper m = new ModelMapper();
-        Suscripcion s = m.map(dto, Suscripcion.class);
-        sS.insert(s);
+        Suscripcion a = m.map(dto, Suscripcion.class);
+        aS.insert(a);
     }
-    @PutMapping
-    public void modificar(@RequestBody SuscripcionDTO dto) {
+    @GetMapping("/{id}")
+    public SuscripcionDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
-        Suscripcion s = m.map(dto, Suscripcion.class);
-        sS.update(s);
-    }
-    @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable("id") int id) {
-        sS.delete(id);
+        SuscripcionDto dto = m.map(aS.searchId(id), SuscripcionDto.class);
+        return dto;
     }
 
+    @PutMapping
+    public void modificar(@RequestBody SuscripcionDto dto) {
+        ModelMapper m = new ModelMapper();
+        Suscripcion a = m.map(dto, Suscripcion.class);
+        aS.update(a);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 }

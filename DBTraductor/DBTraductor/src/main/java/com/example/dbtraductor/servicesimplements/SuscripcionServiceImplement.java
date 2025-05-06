@@ -7,29 +7,34 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-
 @Service
 public class SuscripcionServiceImplement implements ISuscripcionService {
+
     @Autowired
-    private ISuscripcionRepository sR;
+    private ISuscripcionRepository re;
 
     @Override
     public List<Suscripcion> list() {
-        return sR.findAll();
+        return re.findAll();
     }
 
     @Override
-    public void insert(Suscripcion s) {
-        sR.save(s);
+    public void insert(Suscripcion a) {
+        re.save(a);
     }
 
     @Override
-    public void update(Suscripcion s) {
-        sR.save(s);
+    public Suscripcion searchId(int id) {
+        return re.findById(id).orElse(new Suscripcion());
+    }
+
+    @Override
+    public void update(Suscripcion a) {
+        re.save(a);
     }
 
     @Override
     public void delete(int id) {
-        sR.deleteById(id);
+        re.deleteById(id);
     }
 }

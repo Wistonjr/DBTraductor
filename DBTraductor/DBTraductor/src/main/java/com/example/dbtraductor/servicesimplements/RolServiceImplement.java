@@ -9,15 +9,21 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public class RolServiceImplement implements IRolService {
+public
+class RolServiceImplement implements IRolService {
 
     @Autowired
-    private IRolRepository eR;
+    private IRolRepository re;
 
     @Override
-    public List<Rol> list() { return eR.findAll();}
+    public List<Rol> list() { return re.findAll();}
 
     @Override
-    public void insert(Rol rol) {eR.save(rol);
+    public void insert(Rol rol) {re.save(rol);
     }
+
+    @Override
+    public List<String[]> QuantityModeradoresByApp() { return re.QuantityModeradoresByApp();
+    }
+
 }
