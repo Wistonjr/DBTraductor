@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 public class AsistenteVirtualController {
     @Autowired
     private IAsistenteVirtualService aS;
-
+//a
     @GetMapping
     public List<AsistenteVirtualDto> listar() {
         return aS.list().stream().map( x -> {
