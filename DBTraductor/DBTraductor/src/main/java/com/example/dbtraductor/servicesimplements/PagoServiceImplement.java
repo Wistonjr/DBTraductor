@@ -6,6 +6,7 @@ import com.example.dbtraductor.servicesinterfaces.IPagoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 @Service
 public class PagoServiceImplement implements IPagoService {
@@ -37,4 +38,10 @@ public class PagoServiceImplement implements IPagoService {
     public void delete(int id) {
         re.deleteById(id);
     }
+
+    @Override
+    public List<String[]> getTotal() {
+        return re.getTotal();
+    }
+
 }

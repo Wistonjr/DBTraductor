@@ -1,11 +1,14 @@
 package com.example.dbtraductor.controllers;
 import com.example.dbtraductor.dtos.PagoDto;
+import com.example.dbtraductor.dtos.PagoRecaudacionDto;
 import com.example.dbtraductor.entities.Pago;
 import com.example.dbtraductor.servicesinterfaces.IPagoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,7 +20,7 @@ public class PagoController {
 
     @GetMapping
     public List<PagoDto> listar() {
-        return aS.list().stream().map( x -> {
+        return aS.list().stream().map(x -> {
             ModelMapper m = new ModelMapper();
             return m.map(x, PagoDto.class);
         }).collect(Collectors.toList());
@@ -46,5 +49,21 @@ public class PagoController {
     }
 
     @DeleteMapping("/{id}")
-    public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
+    public void eliminar(@PathVariable("id") int id) {
+        aS.delete(id);
+    }
+
+    @GetMapping("/recaudacion/{fecha}")
+    public List<PagoRecaudacionDto> listarRecaudacion(@PathVariable("fecha") String fecha) {
+        List<String[]> filaLista=aS.getTotal();
+        List<PagoRecaudacionDto> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            PagoRecaudacionDto dto=new PagoRecaudacionDto();
+            dto.setFechaPago(LocalDate.parse(columna[0]));
+            dto.setMonto(Float.parseFloat(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+    }
+
 }

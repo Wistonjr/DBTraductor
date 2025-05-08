@@ -7,7 +7,7 @@ import java.time.LocalDate;
 public class PagoDto {
 
     private int idPago;
-    
+
     private float monto;
 
     private String metodo;
