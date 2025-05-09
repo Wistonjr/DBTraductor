@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/traduccion")
+@RequestMapping("/traducciones")
 public class TraduccionController {
     @Autowired
     private ITraduccionService aS;

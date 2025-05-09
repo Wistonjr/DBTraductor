@@ -3,7 +3,7 @@ package com.example.dbtraductor.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="asistenteVirtual")
+@Table(name="AsistenteVirtual")
 public class AsistenteVirtual {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/asistentevirtual")
+@RequestMapping("/asistentesvirtuales")
 public class AsistenteVirtualController {
     @Autowired
     private IAsistenteVirtualService aS;

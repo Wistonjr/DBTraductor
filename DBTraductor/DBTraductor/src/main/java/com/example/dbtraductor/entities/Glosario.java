@@ -3,7 +3,7 @@ package com.example.dbtraductor.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="glosario")
+@Table(name="Glosario")
 public class Glosario {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -12,15 +12,17 @@ public class Glosario {
     private String palabra;
     @Column(name = "descripcion", nullable = false, length = 400)
     private String descripcion;
+    @OneToOne
+    @JoinColumn(name ="idTraduccion")
+    private Traduccion idTraduccion;
 
-    public Glosario() {
+    public Glosario() {}
 
-    }
-
-    public Glosario(int idGlosario, String palabra, String descripcion) {
+    public Glosario(int idGlosario, String palabra, String descripcion, Traduccion idTraduccion) {
         this.idGlosario = idGlosario;
         this.palabra = palabra;
         this.descripcion = descripcion;
+        this.idTraduccion = idTraduccion;
     }
 
     public int getIdGlosario() {
@@ -45,5 +47,13 @@ public class Glosario {
 
     public void setDescripcion(String descripcion) {
         this.descripcion = descripcion;
+    }
+
+    public Traduccion getIdTraduccion() {
+        return idTraduccion;
+    }
+
+    public void setIdTraduccion(Traduccion idTraduccion) {
+        this.idTraduccion = idTraduccion;
     }
 }

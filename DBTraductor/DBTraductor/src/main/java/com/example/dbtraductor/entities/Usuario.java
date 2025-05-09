@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 @Entity
-@Table(name="usuario")
+@Table(name="Usuario")
 public class Usuario {
 
     @Id
@@ -30,8 +30,6 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "idRol")
     private Rol idRol;
-
-
 
     public Usuario(int idUsuario, String nombre, int telefono, LocalDate fechaNacimiento, String email, String password, Rol idRol) {
         this.idUsuario = idUsuario;

@@ -1,18 +1,19 @@
 package com.example.dbtraductor.dtos;
 
-import com.example.dbtraductor.entities.Glosario;
+import com.example.dbtraductor.entities.Escaneo;
+import com.example.dbtraductor.entities.LenguajeProgramacion;
 import com.example.dbtraductor.entities.Usuario;
 
 import java.time.LocalDate;
 
 public class TraduccionDto {
     private int idTraduccion;
-    private String lenguajeProgramacion;
     private String codigoOriginal;
     private String codigoTraducido;
     private LocalDate fechaTraduccion;
     private Usuario idUsuario;
-    private Glosario idGlosario;
+    private Escaneo idEscaneo;
+    private LenguajeProgramacion idLenguajeProgramacion;
 
     public int getIdTraduccion() {
         return idTraduccion;
@@ -20,14 +21,6 @@ public class TraduccionDto {
 
     public void setIdTraduccion(int idTraduccion) {
         this.idTraduccion = idTraduccion;
-    }
-
-    public String getLenguajeProgramacion() {
-        return lenguajeProgramacion;
-    }
-
-    public void setLenguajeProgramacion(String lenguajeProgramacion) {
-        this.lenguajeProgramacion = lenguajeProgramacion;
     }
 
     public String getCodigoOriginal() {
@@ -62,11 +55,19 @@ public class TraduccionDto {
         this.idUsuario = idUsuario;
     }
 
-    public Glosario getIdGlosario() {
-        return idGlosario;
+    public Escaneo getIdEscaneo() {
+        return idEscaneo;
     }
 
-    public void setIdGlosario(Glosario idGlosario) {
-        this.idGlosario = idGlosario;
+    public void setIdEscaneo(Escaneo idEscaneo) {
+        this.idEscaneo = idEscaneo;
+    }
+
+    public LenguajeProgramacion getIdLenguajeProgramacion() {
+        return idLenguajeProgramacion;
+    }
+
+    public void setIdLenguajeProgramacion(LenguajeProgramacion idLenguajeProgramacion) {
+        this.idLenguajeProgramacion = idLenguajeProgramacion;
     }
 }

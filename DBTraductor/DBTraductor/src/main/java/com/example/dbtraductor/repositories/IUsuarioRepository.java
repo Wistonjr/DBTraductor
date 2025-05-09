@@ -3,10 +3,11 @@ package com.example.dbtraductor.repositories;
 import com.example.dbtraductor.entities.Usuario;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.stereotype.Repository;
 
 import java.util.List;
 
-
+@Repository
 public interface IUsuarioRepository extends JpaRepository<Usuario, Integer> {
     @Query(value="select u.nombre,r.rol_name\n" +
             " from usuario u  inner join rol r\n" +

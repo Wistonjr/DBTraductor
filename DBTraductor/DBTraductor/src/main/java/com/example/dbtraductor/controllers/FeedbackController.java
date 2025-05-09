@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/feedback")
+@RequestMapping("/feedbacks")
 public class FeedbackController {
     @Autowired
     private IFeedBackService aS;

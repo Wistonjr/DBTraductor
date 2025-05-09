@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/escaneo")
+@RequestMapping("/escaneos")
 public class EscaneoController {
     @Autowired
     private IEscaneoService aS;
