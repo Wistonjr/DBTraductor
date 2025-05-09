@@ -1,0 +1,15 @@
+Index: DBTraductor/DBTraductor/src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.application.name=DBTraductor\r\nspring.jpa.database=postgresql\r\nspring.jpa.show-sql=true\r\nspring.jpa.hibernate.ddl-auto=update\r\n\r\nspring.datasource.driver-class-name=org.postgresql.Driver\r\nspring.datasource.url=jdbc:postgresql://ep-still-sun-a4hgicn3-pooler.us-east-1.aws.neon.tech/Traductor3165\r\nspring.datasource.username=Traductor3165_owner\r\nspring.datasource.password=npg_O08zFgDVUaYS\r\nserver.port=8082\r\n#Probar tmb con 5432\r\n#43\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/DBTraductor/DBTraductor/src/main/resources/application.properties b/DBTraductor/DBTraductor/src/main/resources/application.properties
+--- a/DBTraductor/DBTraductor/src/main/resources/application.properties	(revision 05101d359ffc8b254a56083e52889db29c392f23)
++++ b/DBTraductor/DBTraductor/src/main/resources/application.properties	(date 1746770535805)
+@@ -9,4 +9,3 @@
+ spring.datasource.password=npg_O08zFgDVUaYS
+ server.port=8082
+ #Probar tmb con 5432
+-#43
