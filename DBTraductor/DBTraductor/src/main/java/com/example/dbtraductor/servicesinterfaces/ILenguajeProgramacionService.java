@@ -1,6 +1,5 @@
 package com.example.dbtraductor.servicesinterfaces;
 
-import com.example.dbtraductor.entities.Compartir;
 import com.example.dbtraductor.entities.LenguajeProgramacion;
 
 import java.util.List;

@@ -33,7 +33,7 @@ public class CompartirController {
     @GetMapping("/{id}")
     public CompartirDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
-        CompartirDto dto = m.map(cS.searchId(id), CompartirDto.class);
+        CompartirDto dto=m.map(id, CompartirDto.class);
         return dto;
     }
 
