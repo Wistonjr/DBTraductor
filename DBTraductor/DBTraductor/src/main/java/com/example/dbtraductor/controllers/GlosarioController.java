@@ -25,7 +25,7 @@ public class GlosarioController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody GlosarioDto dto) {
+    public void registrar(@RequestBody GlosarioDto dto) {
         ModelMapper m = new ModelMapper();
         Glosario a = m.map(dto, Glosario.class);
         aS.insert(a);

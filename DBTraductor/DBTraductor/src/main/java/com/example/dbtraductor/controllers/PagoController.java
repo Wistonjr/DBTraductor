@@ -24,7 +24,7 @@ public class PagoController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody PagoDto dto) {
+    public void registrar(@RequestBody PagoDto dto) {
         ModelMapper m = new ModelMapper();
         Pago a = m.map(dto, Pago.class);
         aS.insert(a);

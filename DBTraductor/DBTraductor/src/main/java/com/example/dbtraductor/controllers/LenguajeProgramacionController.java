@@ -24,7 +24,7 @@ public class LenguajeProgramacionController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody LenguajeProgramacionDto dto) {
+    public void registrar(@RequestBody LenguajeProgramacionDto dto) {
         ModelMapper m = new ModelMapper();
         LenguajeProgramacion c = m.map(dto, LenguajeProgramacion.class);
         lP.insert(c);

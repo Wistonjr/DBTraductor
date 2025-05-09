@@ -24,7 +24,7 @@ public class AsistenteVirtualController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody AsistenteVirtualDto dto) {
+    public void registrar(@RequestBody AsistenteVirtualDto dto) {
         ModelMapper m = new ModelMapper();
         AsistenteVirtual a = m.map(dto, AsistenteVirtual.class);
         aS.insert(a);

@@ -24,7 +24,7 @@ public class NotificacionController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody NotificacionDto dto) {
+    public void registrar(@RequestBody NotificacionDto dto) {
         ModelMapper m = new ModelMapper();
         Notificacion c = m.map(dto, Notificacion.class);
         nS.insert(c);

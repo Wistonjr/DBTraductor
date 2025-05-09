@@ -25,7 +25,7 @@ public class SuscripcionController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody SuscripcionDto dto) {
+    public void registrar(@RequestBody SuscripcionDto dto) {
         ModelMapper m = new ModelMapper();
         Suscripcion a = m.map(dto, Suscripcion.class);
         aS.insert(a);

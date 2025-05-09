@@ -27,7 +27,7 @@ public class RolController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody RolDto dto){
+    public void registrar(@RequestBody RolDto dto){
         ModelMapper m = new ModelMapper();
         Rol l= m.map(dto, Rol.class);
         rS.insert(l);

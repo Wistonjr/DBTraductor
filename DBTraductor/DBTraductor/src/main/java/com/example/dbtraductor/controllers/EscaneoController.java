@@ -24,7 +24,7 @@ public class EscaneoController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody EscaneoDto dto) {
+    public void registrar(@RequestBody EscaneoDto dto) {
         ModelMapper m = new ModelMapper();
         Escaneo a = m.map(dto, Escaneo.class);
         aS.insert(a);

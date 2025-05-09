@@ -24,7 +24,7 @@ public class CompartirController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody CompartirDto dto) {
+    public void registrar(@RequestBody CompartirDto dto) {
         ModelMapper m = new ModelMapper();
         Compartir c = m.map(dto, Compartir.class);
         cS.insert(c);

@@ -25,7 +25,7 @@ public class TraduccionController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody TraduccionDto dto) {
+    public void registrar(@RequestBody TraduccionDto dto) {
         ModelMapper m = new ModelMapper();
         Traduccion a = m.map(dto, Traduccion.class);
         aS.insert(a);
