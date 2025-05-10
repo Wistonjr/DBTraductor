@@ -9,4 +9,6 @@ public interface IGlosarioService {
     public Glosario searchId(int id);
     public void update (Glosario a);
     public void delete (int id);
+    public List<String[]> frecuenciaPalabrasGlosario();
+    public List<String[]> conteoTraduccionYPalabrasPorDescripcion();
 }

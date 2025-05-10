@@ -10,4 +10,6 @@ public interface ILenguajeProgramacionService {
     public LenguajeProgramacion searchId(int id);
     public void update (LenguajeProgramacion l);
     public void delete (int id);
+    public List<String[]> conteoConMasDiezLenguajes();
+    public List<String[]> buscarLenguajeFrecuente();
 }

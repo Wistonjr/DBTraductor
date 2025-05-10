@@ -5,6 +5,7 @@ import com.example.dbtraductor.servicesinterfaces.ICompartirService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -35,5 +36,16 @@ public class CompartirServiceImplement implements ICompartirService {
     @Override
     public void delete(int id) {
         re.deleteById(id);
+    }
+
+    @Override
+    public List<Compartir> buscarTraduccionesUltimomes(LocalDate fecha) {
+        LocalDate fechaInicio = fecha.minusMonths(1);
+        LocalDate fechaFin = fecha;
+        return re.buscarTraduccionesUltimomes(fechaInicio, fechaFin);
+    }
+    @Override
+    public List<String[]> cantidadTraduccionesCompartidasXMetodoEnvio() {
+        return re.cantidadTraduccionesCompartidasXMetodoEnvio();
     }
 }

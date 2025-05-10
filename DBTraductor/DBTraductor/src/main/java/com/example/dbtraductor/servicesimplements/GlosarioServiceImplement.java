@@ -37,4 +37,8 @@ public class GlosarioServiceImplement implements IGlosarioService {
     public void delete(int id) {
         re.deleteById(id);
     }
+    @Override
+    public List<String[]> frecuenciaPalabrasGlosario(){return re.frecuenciaPalabrasGlosario();}
+    @Override
+    public List<String[]> conteoTraduccionYPalabrasPorDescripcion(){return re.conteoTraduccionYPalabrasPorDescripcion();}
 }

@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Modificar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ICompartirRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ICompartirRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -117,6 +118,8 @@
       <workItem from="1746768201609" duration="161000" />
       <workItem from="1746768368972" duration="2700000" />
       <workItem from="1746826158834" duration="1440000" />
+      <workItem from="1746834208691" duration="17259000" />
+      <workItem from="1746866120019" duration="366000" />
     </task>
     <task id="LOCAL-00001" summary="Añadi tablas Notificacion, LenguajeProgramacion, Compartir">
       <option name="closed" value="true" />

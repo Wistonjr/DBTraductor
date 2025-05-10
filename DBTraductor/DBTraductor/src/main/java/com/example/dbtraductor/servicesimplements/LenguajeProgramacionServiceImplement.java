@@ -39,4 +39,8 @@ public class LenguajeProgramacionServiceImplement implements ILenguajeProgramaci
     public void delete(int id) {
         lp.deleteById(id);
     }
+    @Override
+    public List<String[]> conteoConMasDiezLenguajes(){return lp.conteoConMasDiezLenguajes();}
+    @Override
+    public List<String[]> buscarLenguajeFrecuente(){return lp.buscarLenguajeFrecuente();}
 }

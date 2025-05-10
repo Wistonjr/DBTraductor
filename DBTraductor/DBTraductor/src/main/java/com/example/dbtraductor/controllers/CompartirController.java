@@ -1,5 +1,7 @@
 package com.example.dbtraductor.controllers;
 
+import com.example.dbtraductor.dtos.BuscarTraduccionesUltimoMesDto;
+import com.example.dbtraductor.dtos.CantidadTraduccionesComparXMetodoEnvioDto;
 import com.example.dbtraductor.dtos.CompartirDto;
 import com.example.dbtraductor.entities.Compartir;
 import com.example.dbtraductor.servicesinterfaces.ICompartirService;
@@ -7,6 +9,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,4 +50,20 @@ public class CompartirController {
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {cS.delete(id);}
+
+    @GetMapping("/cantidadTraduccionesCompartidasXMetodoEnvio")
+    public List<CantidadTraduccionesComparXMetodoEnvioDto> listarCantidadTraduccionesCompartidasXMetodoEnvio() {
+        List<String[]> filaLista=cS.cantidadTraduccionesCompartidasXMetodoEnvio();
+        List<CantidadTraduccionesComparXMetodoEnvioDto> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            CantidadTraduccionesComparXMetodoEnvioDto dto=new CantidadTraduccionesComparXMetodoEnvioDto();
+            dto.setMetodoEnvio(columna[0]);
+            dto.setCantidadTraducciones(Integer.parseInt(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+    }
+
+
+
 }
