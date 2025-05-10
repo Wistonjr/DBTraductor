@@ -1,7 +1,6 @@
 package com.example.dbtraductor.controllers;
 
 import com.example.dbtraductor.dtos.BuscarLenguajeFrecuenteDto;
-import com.example.dbtraductor.dtos.CantidadTraduccionesComparXMetodoEnvioDto;
 import com.example.dbtraductor.dtos.ConteoMasDiezLenguajesDto;
 import com.example.dbtraductor.dtos.LenguajeProgramacionDto;
 import com.example.dbtraductor.entities.LenguajeProgramacion;

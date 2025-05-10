@@ -1,6 +1,5 @@
 package com.example.dbtraductor.servicesinterfaces;
 
-import com.example.dbtraductor.entities.Compartir;
 import com.example.dbtraductor.entities.Notificacion;
 
 import java.util.List;

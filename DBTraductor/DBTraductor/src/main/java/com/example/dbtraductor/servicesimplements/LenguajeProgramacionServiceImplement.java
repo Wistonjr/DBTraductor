@@ -1,8 +1,6 @@
 package com.example.dbtraductor.servicesimplements;
 
-import com.example.dbtraductor.entities.FeedBack;
 import com.example.dbtraductor.entities.LenguajeProgramacion;
-import com.example.dbtraductor.repositories.IFeedBackRepository;
 import com.example.dbtraductor.repositories.ILenguajeProgramacionRepository;
 import com.example.dbtraductor.servicesinterfaces.ILenguajeProgramacionService;
 import org.springframework.beans.factory.annotation.Autowired;
