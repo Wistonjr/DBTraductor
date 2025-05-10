@@ -4,7 +4,7 @@ import com.example.dbtraductor.entities.Usuario;
 
 import java.time.LocalDate;
 
-public class SuscripcionDTO {
+public class SuscripcionDto {
     private int idSuscripcion;
     private String tipo;
     private String estado;
