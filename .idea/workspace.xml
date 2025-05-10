@@ -4,8 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Modificar">
+    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="coment">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Rol.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Rol.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Usuario.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +38,12 @@
     &quot;assignee&quot;: &quot;Gbel18&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Wistonjr/DBTraductor.git&quot;,
-    &quot;accountId&quot;: &quot;fb6153f6-bc22-41a2-baf6-b9d046b16ef0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Wistonjr/DBTraductor.git",
+    "accountId": "7d4a5002-cc50-4507-b8ee-d43bec1e8be7"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
@@ -63,7 +66,7 @@
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;Spring Boot.DbTraductorApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;gabriel&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Larry&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -116,7 +119,7 @@
       <workItem from="1746735029665" duration="10823000" />
       <workItem from="1746768201609" duration="161000" />
       <workItem from="1746768368972" duration="2700000" />
-      <workItem from="1746826158834" duration="1440000" />
+      <workItem from="1746834821913" duration="429000" />
     </task>
     <task id="LOCAL-00001" summary="Añadi tablas Notificacion, LenguajeProgramacion, Compartir">
       <option name="closed" value="true" />
@@ -182,31 +185,7 @@
       <option name="project" value="LOCAL" />
       <updated>1746771065673</updated>
     </task>
-    <task id="LOCAL-00009" summary="dd">
-      <option name="closed" value="true" />
-      <created>1746771662612</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1746771662612</updated>
-    </task>
-    <task id="LOCAL-00010" summary="dde">
-      <option name="closed" value="true" />
-      <created>1746771969031</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1746771969031</updated>
-    </task>
-    <task id="LOCAL-00011" summary="Modificar">
-      <option name="closed" value="true" />
-      <created>1746772777443</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1746772777443</updated>
-    </task>
-    <option name="localTasksCounter" value="12" />
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -229,9 +208,6 @@
     <MESSAGE value="Correccion errores" />
     <MESSAGE value="comentario" />
     <MESSAGE value="coment" />
-    <MESSAGE value="dd" />
-    <MESSAGE value="dde" />
-    <MESSAGE value="Modificar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificar" />
+    <option name="LAST_COMMIT_MESSAGE" value="coment" />
   </component>
 </project>

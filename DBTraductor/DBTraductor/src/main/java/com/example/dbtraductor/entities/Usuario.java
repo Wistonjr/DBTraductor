@@ -12,7 +12,7 @@ public class Usuario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
 
-    @Column(name = "nombre", nullable = false, length = 35)
+    @Column(name = "nombre", nullable = false, length = 35,unique = true)
     private String nombre;
 
     @Column(name = "telefono", nullable = false)

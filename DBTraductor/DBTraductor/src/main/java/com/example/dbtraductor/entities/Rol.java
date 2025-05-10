@@ -2,9 +2,11 @@ package com.example.dbtraductor.entities;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-@Table(name="Rol")
-public class Rol {
+@Table(name="Rol", uniqueConstraints = {@UniqueConstraint(columnNames = {"rolName"})})
+public class Rol implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
