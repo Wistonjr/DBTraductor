@@ -15,4 +15,5 @@ public interface IPagoService {
 
     public void delete(int id);
     public List<String[]> getTotal();
+    List<String[]> getTotalMetodo();
 }

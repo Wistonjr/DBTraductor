@@ -1,5 +1,6 @@
 package com.example.dbtraductor.controllers;
 import com.example.dbtraductor.dtos.PagoDto;
+import com.example.dbtraductor.dtos.PagoMetodoDto;
 import com.example.dbtraductor.dtos.PagoRecaudacionDto;
 import com.example.dbtraductor.entities.Pago;
 import com.example.dbtraductor.servicesinterfaces.IPagoService;
@@ -53,13 +54,29 @@ public class PagoController {
         aS.delete(id);
     }
 
-    @GetMapping("/recaudacion/{fecha}")
+    @GetMapping("/recaudaciones/{fecha}")
     public List<PagoRecaudacionDto> listarRecaudacion(@PathVariable("fecha") String fecha) {
-        List<String[]> filaLista=aS.getTotal();
-        List<PagoRecaudacionDto> dtoLista=new ArrayList<>();
+        List<String[]> filaLista = aS.getTotal();
+        List<PagoRecaudacionDto> dtoLista = new ArrayList<>();
+        LocalDate fechaBusqueda = LocalDate.parse(fecha);
+        for (String[] columna : filaLista) {
+            LocalDate fechaPago = LocalDate.parse(columna[0]);
+            if (fechaPago.equals(fechaBusqueda)) {
+                PagoRecaudacionDto dto = new PagoRecaudacionDto();
+                dto.setFechaPago(fechaPago);
+                dto.setMonto(Float.parseFloat(columna[1]));
+                dtoLista.add(dto);
+            }
+        }
+        return dtoLista;
+    }
+    @GetMapping("/metodos")
+    public List<PagoMetodoDto> listarmetodosmonto(){
+        List<String[]> filaLista=aS.getTotalMetodo();
+        List<PagoMetodoDto> dtoLista=new ArrayList<>();
         for(String[] columna:filaLista){
-            PagoRecaudacionDto dto=new PagoRecaudacionDto();
-            dto.setFechaPago(LocalDate.parse(columna[0]));
+            PagoMetodoDto dto=new PagoMetodoDto();
+            dto.setMetodo(columna[0]);
             dto.setMonto(Float.parseFloat(columna[1]));
             dtoLista.add(dto);
         }

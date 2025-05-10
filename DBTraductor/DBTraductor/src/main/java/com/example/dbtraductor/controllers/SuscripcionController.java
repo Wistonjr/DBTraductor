@@ -1,6 +1,6 @@
 package com.example.dbtraductor.controllers;
 
-import com.example.dbtraductor.dtos.SuscripcionDto;
+import com.example.dbtraductor.dtos.SuscripcionDTO;
 import com.example.dbtraductor.entities.Suscripcion;
 import com.example.dbtraductor.servicesinterfaces.ISuscripcionService;
 import org.modelmapper.ModelMapper;
@@ -17,28 +17,28 @@ public class SuscripcionController {
     private ISuscripcionService aS;
 
     @GetMapping
-    public List<SuscripcionDto> listar() {
+    public List<SuscripcionDTO> listar() {
         return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
-            return m.map(x, SuscripcionDto.class);
+            return m.map(x, SuscripcionDTO.class);
         }).collect(Collectors.toList());
     }
 
     @PostMapping
-    public void insertar(@RequestBody SuscripcionDto dto) {
+    public void insertar(@RequestBody SuscripcionDTO dto) {
         ModelMapper m = new ModelMapper();
         Suscripcion a = m.map(dto, Suscripcion.class);
         aS.insert(a);
     }
     @GetMapping("/{id}")
-    public SuscripcionDto listarId(@PathVariable("id") int id) {
+    public SuscripcionDTO listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
-        SuscripcionDto dto = m.map(aS.searchId(id), SuscripcionDto.class);
+        SuscripcionDTO dto = m.map(aS.searchId(id), SuscripcionDTO.class);
         return dto;
     }
 
     @PutMapping
-    public void modificar(@RequestBody SuscripcionDto dto) {
+    public void modificar(@RequestBody SuscripcionDTO dto) {
         ModelMapper m = new ModelMapper();
         Suscripcion a = m.map(dto, Suscripcion.class);
         aS.update(a);

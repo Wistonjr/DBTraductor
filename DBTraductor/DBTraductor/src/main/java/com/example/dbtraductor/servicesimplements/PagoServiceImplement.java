@@ -44,4 +44,9 @@ public class PagoServiceImplement implements IPagoService {
         return re.getTotal();
     }
 
+    @Override
+    public List<String[]> getTotalMetodo() {
+        return re.getTotalMetodo();
+    }
+
 }
