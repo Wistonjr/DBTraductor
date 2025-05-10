@@ -11,7 +11,7 @@ import java.util.List;
 @Repository
 public interface ICompartirRepository extends JpaRepository<Compartir, Integer> {
     @Query(value = "SELECT c FROM Compartir c WHERE c.fechaEnvio >= :fechaInicio AND c.fechaEnvio < :fechaFin")
-    public List<Compartir> buscarTraduccionesUltimomes(LocalDate fechaInicio, LocalDate fechaFin);
+    public List<String[]> buscarTraduccionesUltimomes(LocalDate fechaInicio, LocalDate fechaFin);
 
     @Query(value = "SELECT c.metodo_envio, COUNT(*) AS cantidad_traducciones\n" +
             " FROM Compartir c\n" +

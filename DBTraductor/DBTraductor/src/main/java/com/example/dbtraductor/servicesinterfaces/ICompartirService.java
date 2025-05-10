@@ -11,6 +11,6 @@ public interface ICompartirService {
     public Compartir searchId(int id);
     public void update (Compartir c);
     public void delete (int id);
-    public List<Compartir> buscarTraduccionesUltimomes(LocalDate fecha);
+    public List<String[]> buscarTraduccionesCompartidosUltimomes(LocalDate fecha);
     public List<String[]> cantidadTraduccionesCompartidasXMetodoEnvio();
 }

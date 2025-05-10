@@ -2,7 +2,7 @@ package com.example.dbtraductor.dtos;
 
 public class ConteoTraduccionYPalabrasDto {
     private String descripcion;
-    private String cantidadTraducciones;
+    private int cantidadTraducciones;
 
     public String getDescripcion() {
         return descripcion;
@@ -12,11 +12,11 @@ public class ConteoTraduccionYPalabrasDto {
         this.descripcion = descripcion;
     }
 
-    public String getCantidadTraducciones() {
+    public int getCantidadTraducciones() {
         return cantidadTraducciones;
     }
 
-    public void setCantidadTraducciones(String cantidadTraducciones) {
+    public void setCantidadTraducciones(int cantidadTraducciones) {
         this.cantidadTraducciones = cantidadTraducciones;
     }
 }

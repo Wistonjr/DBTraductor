@@ -39,7 +39,7 @@ public class CompartirServiceImplement implements ICompartirService {
     }
 
     @Override
-    public List<Compartir> buscarTraduccionesUltimomes(LocalDate fecha) {
+    public List<String[]> buscarTraduccionesCompartidosUltimomes(LocalDate fecha) {
         LocalDate fechaInicio = fecha.minusMonths(1);
         LocalDate fechaFin = fecha;
         return re.buscarTraduccionesUltimomes(fechaInicio, fechaFin);

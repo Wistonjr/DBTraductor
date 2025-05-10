@@ -15,16 +15,17 @@ public interface ILenguajeProgramacionRepository extends JpaRepository<LenguajeP
             " HAVING COUNT(*) > 10;",nativeQuery = true)
     public List<String[]> conteoConMasDiezLenguajes();
 
-    @Query(value = "SELECT \n" +
-            "    lp.nombre AS lenguaje_programacion, \n" +
-            "    COUNT(t.id_traduccion) AS total_traducciones \n" +
-            " FROM \n" +
-            "    Traduccion t\n" +
-            " JOIN \n" +
-            "    Lenguaje_Programacion lp ON t.id_lenguaje_programacion = lp.id_lenguaje_programacion \n" +
-            "    lp.nombre  \n" +
-            " ORDER BY \n" +
-            "    total_traducciones DESC \n" +
-            "LIMIT 1; ",nativeQuery = true)
+    @Query(value = "SELECT " +
+            "    lp.nombre AS lenguaje_programacion, " +
+            "    COUNT(t.id_traduccion) AS total_traducciones " +
+            " FROM " +
+            "    Traduccion t " +
+            " JOIN " +
+            "    Lenguaje_Programacion lp ON t.id_lenguaje_programacion = lp.id_lenguaje_programacion " +
+            " GROUP BY " +
+            "    lp.nombre " +  // Es importante agrupar por lp.nombre
+            " ORDER BY " +
+            "    total_traducciones DESC " +
+            " LIMIT 1", nativeQuery = true)
     public List<String[]> buscarLenguajeFrecuente();
 }

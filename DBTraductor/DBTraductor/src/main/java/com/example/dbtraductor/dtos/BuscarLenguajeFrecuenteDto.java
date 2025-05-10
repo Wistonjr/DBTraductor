@@ -2,7 +2,7 @@ package com.example.dbtraductor.dtos;
 
 public class BuscarLenguajeFrecuenteDto {
     private String nombre;
-    private String totalTraducciones;
+    private int totalTraducciones;
 
     public String getNombre() {
         return nombre;
@@ -12,11 +12,11 @@ public class BuscarLenguajeFrecuenteDto {
         this.nombre = nombre;
     }
 
-    public String getTotalTraducciones() {
+    public int getTotalTraducciones() {
         return totalTraducciones;
     }
 
-    public void setTotalTraducciones(String totalTraducciones) {
+    public void setTotalTraducciones(int totalTraducciones) {
         this.totalTraducciones = totalTraducciones;
     }
 }

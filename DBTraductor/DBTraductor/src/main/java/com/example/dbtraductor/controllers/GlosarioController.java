@@ -1,12 +1,13 @@
 package com.example.dbtraductor.controllers;
 
-import com.example.dbtraductor.dtos.GlosarioDto;
+import com.example.dbtraductor.dtos.*;
 import com.example.dbtraductor.entities.Glosario;
 import com.example.dbtraductor.servicesinterfaces.IGlosarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -47,4 +48,30 @@ public class GlosarioController {
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
+
+    @GetMapping("/palabrasMasFrecuentes")
+    public List<FrecuenciaPalabrasDto> listarFrecuenciaPalabras() {
+        List<String[]> filaLista=aS.frecuenciaPalabrasGlosario();
+        List<FrecuenciaPalabrasDto> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            FrecuenciaPalabrasDto dto=new FrecuenciaPalabrasDto();
+            dto.setDescripcion(columna[0]);
+            dto.setCantidadPalabras(Integer.parseInt(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+    }
+
+    @GetMapping("/cantidadTraduccionYPalabrasXDescripcion")
+    public List<ConteoTraduccionYPalabrasDto> listarCantidadTraduccionYPalabrasXDescripcion() {
+        List<String[]> filaLista=aS.conteoTraduccionYPalabrasPorDescripcion();
+        List<ConteoTraduccionYPalabrasDto> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            ConteoTraduccionYPalabrasDto dto=new ConteoTraduccionYPalabrasDto();
+            dto.setDescripcion(columna[0]);
+            dto.setCantidadTraducciones(Integer.parseInt(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+    }
 }

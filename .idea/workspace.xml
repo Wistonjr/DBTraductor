@@ -4,9 +4,42 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Modificar">
+    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Agregue mis querys">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/GlosarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/GlosarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/LenguajeProgramacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/LenguajeProgramacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/BuscarLenguajeFrecuenteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/BuscarLenguajeFrecuenteDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/ConteoTraduccionYPalabrasDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/ConteoTraduccionYPalabrasDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ICompartirRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ICompartirRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/CompartirServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/CompartirServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/ICompartirService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/ICompartirService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/AsistenteVirtualController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/AsistenteVirtualController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/EscaneoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/EscaneoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/FeedbackController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/FeedbackController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/GlosarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/GlosarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/LenguajeProgramacionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/LenguajeProgramacionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/NotificacionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/NotificacionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/PagoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/PagoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/RolController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/RolController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/SuscripcionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/SuscripcionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/TraduccionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/TraduccionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Rol.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Rol.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Usuario.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Usuario.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ICompartirRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ICompartirRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/IGlosarioRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/IGlosarioRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/CompartirServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/CompartirServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/GlosarioServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/GlosarioServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/LenguajeProgramacionServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/LenguajeProgramacionServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/ICompartirService.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/ICompartirService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/IGlosarioService.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/IGlosarioService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/ILenguajeProgramacionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/ILenguajeProgramacionService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,6 +153,7 @@
       <workItem from="1746826158834" duration="1440000" />
       <workItem from="1746834208691" duration="17259000" />
       <workItem from="1746866120019" duration="366000" />
+      <workItem from="1746866524245" duration="6095000" />
     </task>
     <task id="LOCAL-00001" summary="Añadi tablas Notificacion, LenguajeProgramacion, Compartir">
       <option name="closed" value="true" />
@@ -209,7 +243,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746772777443</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Agregue mis querys">
+      <option name="closed" value="true" />
+      <created>1746869980663</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1746869980663</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,6 +277,7 @@
     <MESSAGE value="dd" />
     <MESSAGE value="dde" />
     <MESSAGE value="Modificar" />
-    <option name="LAST_COMMIT_MESSAGE" value="Modificar" />
+    <MESSAGE value="Agregue mis querys" />
+    <option name="LAST_COMMIT_MESSAGE" value="Agregue mis querys" />
   </component>
 </project>
