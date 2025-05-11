@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name="feedback")
+@Table(name="Feedback")
 public class FeedBack {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

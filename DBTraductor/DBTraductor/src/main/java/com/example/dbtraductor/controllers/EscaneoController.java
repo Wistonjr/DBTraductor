@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/escaneo")
+@RequestMapping("/escaneos")
 public class EscaneoController {
     @Autowired
     private IEscaneoService aS;
@@ -24,7 +24,7 @@ public class EscaneoController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody EscaneoDto dto) {
+    public void registrar(@RequestBody EscaneoDto dto) {
         ModelMapper m = new ModelMapper();
         Escaneo a = m.map(dto, Escaneo.class);
         aS.insert(a);

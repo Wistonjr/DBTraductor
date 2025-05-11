@@ -4,13 +4,11 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 @Entity
-@Table(name="traduccion")
+@Table(name="Traduccion")
 public class Traduccion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idTraduccion;
-    @Column(name="lenguajeProgramacion", nullable=false,length=20)
-    private String lenguajeProgramacion;
     @Lob
     @Column(name="codigoOriginal", nullable=false)
     private String codigoOriginal;
@@ -20,24 +18,25 @@ public class Traduccion {
     @Column(name="fechaTraduccion", nullable=false)
     private LocalDate fechaTraduccion;
     @ManyToOne
-    @JoinColumn(name ="usuarioId")
+    @JoinColumn(name ="idUsuario")
     private Usuario idUsuario;
     @ManyToOne
-    @JoinColumn(name ="glosarioId")
-    private Glosario idGlosario;
+    @JoinColumn(name ="idEscaneo")
+    private Escaneo idEscaneo;
+    @ManyToOne
+    @JoinColumn(name ="idLenguajeProgramacion")
+    private LenguajeProgramacion idLenguajeProgramacion;
 
-    public Traduccion(int idTraduccion, String lenguajeProgramacion, String codigoOriginal, String codigoTraducido, LocalDate fechaTraduccion, Usuario idUsuario, Glosario idGlosario) {
+    public Traduccion() {}
+
+    public Traduccion(int idTraduccion, String codigoOriginal, String codigoTraducido, LocalDate fechaTraduccion, Usuario idUsuario, Escaneo idEscaneo, LenguajeProgramacion idLenguajeProgramacion) {
         this.idTraduccion = idTraduccion;
-        this.lenguajeProgramacion = lenguajeProgramacion;
         this.codigoOriginal = codigoOriginal;
         this.codigoTraducido = codigoTraducido;
         this.fechaTraduccion = fechaTraduccion;
         this.idUsuario = idUsuario;
-        this.idGlosario = idGlosario;
-    }
-
-    public Traduccion() {
-
+        this.idEscaneo = idEscaneo;
+        this.idLenguajeProgramacion = idLenguajeProgramacion;
     }
 
     public int getIdTraduccion() {
@@ -46,14 +45,6 @@ public class Traduccion {
 
     public void setIdTraduccion(int idTraduccion) {
         this.idTraduccion = idTraduccion;
-    }
-
-    public String getLenguajeProgramacion() {
-        return lenguajeProgramacion;
-    }
-
-    public void setLenguajeProgramacion(String lenguajeProgramacion) {
-        this.lenguajeProgramacion = lenguajeProgramacion;
     }
 
     public String getCodigoOriginal() {
@@ -88,11 +79,19 @@ public class Traduccion {
         this.idUsuario = idUsuario;
     }
 
-    public Glosario getIdGlosario() {
-        return idGlosario;
+    public Escaneo getIdEscaneo() {
+        return idEscaneo;
     }
 
-    public void setIdGlosario(Glosario idGlosario) {
-        this.idGlosario = idGlosario;
+    public void setIdEscaneo(Escaneo idEscaneo) {
+        this.idEscaneo = idEscaneo;
+    }
+
+    public LenguajeProgramacion getIdLenguajeProgramacion() {
+        return idLenguajeProgramacion;
+    }
+
+    public void setIdLenguajeProgramacion(LenguajeProgramacion idLenguajeProgramacion) {
+        this.idLenguajeProgramacion = idLenguajeProgramacion;
     }
 }

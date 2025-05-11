@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/suscripcion")
+@RequestMapping("/suscripciones")
 public class SuscripcionController {
     @Autowired
     private ISuscripcionService aS;
@@ -25,7 +25,7 @@ public class SuscripcionController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody SuscripcionDto dto) {
+    public void registrar(@RequestBody SuscripcionDto dto) {
         ModelMapper m = new ModelMapper();
         Suscripcion a = m.map(dto, Suscripcion.class);
         aS.insert(a);

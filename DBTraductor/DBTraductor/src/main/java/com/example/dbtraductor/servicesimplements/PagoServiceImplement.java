@@ -37,4 +37,14 @@ public class PagoServiceImplement implements IPagoService {
     public void delete(int id) {
         re.deleteById(id);
     }
+
+    @Override
+    public List<String[]> getTotal() {
+        return re.getTotal();
+    }
+
+    @Override
+    public List<String[]> getTotalMetodo() {
+        return re.getTotalMetodo();
+    }
 }

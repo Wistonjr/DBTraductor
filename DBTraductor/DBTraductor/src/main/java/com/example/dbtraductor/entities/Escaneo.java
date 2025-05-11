@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 @Entity
-@Table(name="escaneo")
+@Table(name="Escaneo")
 public class Escaneo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -21,9 +21,6 @@ public class Escaneo {
     @ManyToOne
     @JoinColumn(name ="idAsistenteVirtual")
     private AsistenteVirtual idAsistenteVirtual;
-    @ManyToOne
-    @JoinColumn(name ="idTraduccion")
-    private Traduccion idTraduccion;
 
     public Escaneo() {
     }
@@ -34,7 +31,6 @@ public class Escaneo {
         this.fechaEscaneo = fechaEscaneo;
         this.idUsuario = idUsuario;
         this.idAsistenteVirtual = idAsistenteVirtual;
-        this.idTraduccion = idTraduccion;
     }
 
     public int getIdEscaneo() {
@@ -75,13 +71,5 @@ public class Escaneo {
 
     public void setIdAsistenteVirtual(AsistenteVirtual idAsistenteVirtual) {
         this.idAsistenteVirtual = idAsistenteVirtual;
-    }
-
-    public Traduccion getIdTraduccion() {
-        return idTraduccion;
-    }
-
-    public void setIdTraduccion(Traduccion idTraduccion) {
-        this.idTraduccion = idTraduccion;
     }
 }

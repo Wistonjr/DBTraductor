@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/feedback")
+@RequestMapping("/feedbacks")
 public class FeedbackController {
     @Autowired
     private IFeedBackService aS;
@@ -24,7 +24,7 @@ public class FeedbackController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody FeedBackDto dto) {
+    public void registrar(@RequestBody FeedBackDto dto) {
         ModelMapper m = new ModelMapper();
         FeedBack a = m.map(dto, FeedBack.class);
         aS.insert(a);

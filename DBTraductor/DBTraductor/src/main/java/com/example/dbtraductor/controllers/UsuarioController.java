@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/usuario")
+@RequestMapping("/usuarios")
 
 public class UsuarioController {
     @Autowired
@@ -33,7 +33,7 @@ public class UsuarioController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody UsuarioDto dto) {
+    public void registrar(@RequestBody UsuarioDto dto) {
         ModelMapper m = new ModelMapper();
         Usuario a = m.map(dto, Usuario.class);
         uS.insert(a);

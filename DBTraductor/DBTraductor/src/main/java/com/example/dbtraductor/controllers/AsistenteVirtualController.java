@@ -11,11 +11,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/asistentevirtual")
+@RequestMapping("/asistentesvirtuales")
 public class AsistenteVirtualController {
     @Autowired
     private IAsistenteVirtualService aS;
-//a
     @GetMapping
     public List<AsistenteVirtualDto> listar() {
         return aS.list().stream().map( x -> {
@@ -25,7 +24,7 @@ public class AsistenteVirtualController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody AsistenteVirtualDto dto) {
+    public void registrar(@RequestBody AsistenteVirtualDto dto) {
         ModelMapper m = new ModelMapper();
         AsistenteVirtual a = m.map(dto, AsistenteVirtual.class);
         aS.insert(a);

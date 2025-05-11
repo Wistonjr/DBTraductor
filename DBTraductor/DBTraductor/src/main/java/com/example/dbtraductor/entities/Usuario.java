@@ -5,14 +5,14 @@ import jakarta.persistence.*;
 
 import java.time.LocalDate;
 @Entity
-@Table(name="usuario")
+@Table(name="Usuario")
 public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idUsuario;
 
-    @Column(name = "nombre", nullable = false, length = 35)
+    @Column(name = "nombre", nullable = false, length = 35,unique = true)
     private String nombre;
 
     @Column(name = "telefono", nullable = false)
@@ -30,8 +30,6 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "idRol")
     private Rol idRol;
-
-
 
     public Usuario(int idUsuario, String nombre, int telefono, LocalDate fechaNacimiento, String email, String password, Rol idRol) {
         this.idUsuario = idUsuario;
