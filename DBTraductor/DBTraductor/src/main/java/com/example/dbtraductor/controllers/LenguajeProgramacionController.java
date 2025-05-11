@@ -50,7 +50,7 @@ public class LenguajeProgramacionController {
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {lP.delete(id);}
 
-    @GetMapping("/buscarLenguajeFrecuente")
+    @GetMapping("/listarLenguajeFrecuente")
     public List<BuscarLenguajeFrecuenteDto> listarLenguajeFrecuente() {
         List<String[]> filaLista=lP.buscarLenguajeFrecuente();
         List<BuscarLenguajeFrecuenteDto> dtoLista=new ArrayList<>();
@@ -63,7 +63,7 @@ public class LenguajeProgramacionController {
         return dtoLista;
     }
 
-    @GetMapping("/buscarCantidadMasDiezLenguajes")
+    @GetMapping("/cantidadMasDiezLenguajes")
     public List<ConteoMasDiezLenguajesDto> listarCantidadMasDiezLenguajes() {
         List<String[]> filaLista=lP.conteoConMasDiezLenguajes();
         List<ConteoMasDiezLenguajesDto> dtoLista=new ArrayList<>();

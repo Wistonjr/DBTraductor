@@ -4,8 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Actualice mis querys por completo">
+    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Elimine codigo muerto">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/LenguajeProgramacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/LenguajeProgramacionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/LenguajeProgramacionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/LenguajeProgramacionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/UsuarioController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/LenguajeProgramacionServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/LenguajeProgramacionServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/INotificacionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/INotificacionService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +127,8 @@
       <workItem from="1746834208691" duration="17259000" />
       <workItem from="1746866120019" duration="366000" />
       <workItem from="1746866524245" duration="6443000" />
-      <workItem from="1746906368355" duration="1490000" />
+      <workItem from="1746906368355" duration="5912000" />
+      <workItem from="1747002854472" duration="2720000" />
     </task>
     <task id="LOCAL-00001" summary="Añadi tablas Notificacion, LenguajeProgramacion, Compartir">
       <option name="closed" value="true" />
@@ -233,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746872944848</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Elimine codigo muerto">
+      <option name="closed" value="true" />
+      <created>1746913420075</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1746913420075</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,6 +278,7 @@
     <MESSAGE value="Modificar" />
     <MESSAGE value="Agregue mis querys" />
     <MESSAGE value="Actualice mis querys por completo" />
-    <option name="LAST_COMMIT_MESSAGE" value="Actualice mis querys por completo" />
+    <MESSAGE value="Elimine codigo muerto" />
+    <option name="LAST_COMMIT_MESSAGE" value="Elimine codigo muerto" />
   </component>
 </project>

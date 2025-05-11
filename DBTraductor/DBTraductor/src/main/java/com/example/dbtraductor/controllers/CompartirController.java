@@ -64,7 +64,7 @@ public class CompartirController {
         return dtoLista;
     }
 
-    @GetMapping("/buscarTraduccionesCompartidosUltimoMes")
+    @GetMapping("/listarTraduccionesCompartidosUltimoMes")
     public List<BuscarTraduccionesUltimoMesDto> listarTraduccionesCompartidosUltimoMes() {
         List<String[]> filaLista=cS.buscarTraduccionesCompartidosUltimomes(LocalDate.now());
         List<BuscarTraduccionesUltimoMesDto> dtoLista=new ArrayList<>();
