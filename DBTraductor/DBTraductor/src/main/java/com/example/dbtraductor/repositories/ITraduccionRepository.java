@@ -11,5 +11,5 @@ public interface ITraduccionRepository extends JpaRepository<Traduccion, Integer
     static Object findMostTranslatedLanguage() {
         return null;
     }
-
+    /* Lenguaje más usado en traducciones */
 }
