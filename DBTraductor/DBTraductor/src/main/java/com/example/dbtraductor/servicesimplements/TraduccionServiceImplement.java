@@ -1,6 +1,7 @@
 package com.example.dbtraductor.servicesimplements;
 
 import com.example.dbtraductor.entities.Traduccion;
+import com.example.dbtraductor.repositories.ITraduccionRepository;
 import com.example.dbtraductor.servicesinterfaces.ITraduccionService;
 import org.springframework.stereotype.Service;
 
@@ -34,4 +35,9 @@ public class TraduccionServiceImplement implements ITraduccionService {
     public void update(Traduccion a) {
 
     }
+
+    public Object getMostTranslatedLanguage() {
+        return ITraduccionRepository.findMostTranslatedLanguage();
+    }
+
 }
