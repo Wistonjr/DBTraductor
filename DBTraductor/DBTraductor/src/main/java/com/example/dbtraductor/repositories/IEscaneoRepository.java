@@ -14,5 +14,6 @@ public interface IEscaneoRepository extends JpaRepository<Escaneo, Integer> {
 /**
  * Devuelve el ID de la app que fue más escaneada.
  * Agrupa por app y cuenta cuántos escaneos tiene cada una.
- * Sirve para saber cuál se revisa más seguido. "Código fuente más escaneado por lenguaje"
+ * Sirve para saber cuál se revisa más seguido.
+ * "Código fuente más escaneado por lenguaje"
  */
