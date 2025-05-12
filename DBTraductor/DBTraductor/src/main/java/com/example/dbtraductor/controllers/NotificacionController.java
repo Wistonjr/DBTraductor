@@ -1,12 +1,15 @@
 package com.example.dbtraductor.controllers;
 
 import com.example.dbtraductor.dtos.NotificacionDto;
+import com.example.dbtraductor.dtos.RolDto;
 import com.example.dbtraductor.entities.Notificacion;
 import com.example.dbtraductor.servicesinterfaces.INotificacionService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,4 +49,19 @@ public class NotificacionController {
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {nS.delete(id);}
+
+    @GetMapping("/tiponotificacionmasenviado")
+    public List<NotificacionDto> ListarTiponotificacionmasenviado() {
+        List<String[]> filaLista=nS.TypesOfNotificationsMostSentPerMonth();
+        List<NotificacionDto> dtoLista = new ArrayList<>();
+        for (String[] columna : filaLista) {
+            NotificacionDto dto = new NotificacionDto();
+            dto.setTipo(columna[0]);
+            dto.setFechaEnvio(LocalDate.parse(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+
+    }
+
 }

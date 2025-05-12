@@ -5,7 +5,7 @@ import jakarta.persistence.*;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "Notificacion")
+@Table(name = "Notificacion",uniqueConstraints = {@UniqueConstraint(columnNames = {"mensaje","tipo","fechaEnvio","leido","idUsuario"})})
 public class Notificacion {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
