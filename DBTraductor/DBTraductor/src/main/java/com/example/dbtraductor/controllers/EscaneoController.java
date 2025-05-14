@@ -1,4 +1,5 @@
 package com.example.dbtraductor.controllers;
+import com.example.dbtraductor.dtos.BuscarEscaneoPorFechaDto;
 import com.example.dbtraductor.dtos.EscaneoDto;
 import com.example.dbtraductor.entities.Escaneo;
 import com.example.dbtraductor.servicesinterfaces.IEscaneoService;
@@ -6,6 +7,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,4 +48,12 @@ public class EscaneoController {
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
+
+    @GetMapping("/fecha")
+    public List<BuscarEscaneoPorFechaDto> buscarEscaneoPorFecha(@RequestParam LocalDate fecha) {
+        return aS.findByFechaEscaneo(fecha).stream().map(p -> {
+            ModelMapper m = new ModelMapper();
+            return m.map(p, BuscarEscaneoPorFechaDto.class);
+        }).collect(Collectors.toList());
+    }
 }

@@ -1,6 +1,6 @@
 package com.example.dbtraductor.dtos;
 
-public class RolesUsuariosDTO {
+public class RolesUsuariosDto {
 
     private String nombre;
     private String rolName;

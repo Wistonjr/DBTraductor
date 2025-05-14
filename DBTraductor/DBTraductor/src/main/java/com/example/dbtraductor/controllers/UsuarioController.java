@@ -1,6 +1,6 @@
 package com.example.dbtraductor.controllers;
 
-import com.example.dbtraductor.dtos.RolesUsuariosDTO;
+import com.example.dbtraductor.dtos.RolesUsuariosDto;
 import com.example.dbtraductor.dtos.UsuarioDto;
 import com.example.dbtraductor.entities.Usuario;
 import com.example.dbtraductor.servicesinterfaces.IUsuarioService;
@@ -52,11 +52,11 @@ public class UsuarioController {
     public void eliminar(@PathVariable("id") int id) {uS.delete(id);}
 
     @GetMapping("/roles")
-    public List<RolesUsuariosDTO>  RolesUsuarios(){
+    public List<RolesUsuariosDto>  RolesUsuarios(){
         List<String[]>filaLista = uS.RolesUsuarios();
-        List<RolesUsuariosDTO> dtoRoles = new ArrayList<>();
+        List<RolesUsuariosDto> dtoRoles = new ArrayList<>();
         for (String[] columna : filaLista) {
-            RolesUsuariosDTO dto = new RolesUsuariosDTO();
+            RolesUsuariosDto dto = new RolesUsuariosDto();
             dto.setNombre(columna[0]);
             dto.setRolName((columna[1]));
             dtoRoles.add(dto);

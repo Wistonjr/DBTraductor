@@ -2,7 +2,7 @@ package com.example.dbtraductor.dtos;
 
 import java.time.LocalDate;
 
-public class BuscarTraduccionesUltimoMesDto {
+public class MostrarTraduccionesUltimoMesDto {
     private int idTraduccion;
     private String metodoEnvio;
     private LocalDate fechaEnvio;

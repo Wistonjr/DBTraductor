@@ -1,6 +1,6 @@
 package com.example.dbtraductor.dtos;
 
-public class BuscarLenguajeFrecuenteDto {
+public class MostrarLenguajeFrecuenteDto {
     private String nombre;
     private int totalTraducciones;
 

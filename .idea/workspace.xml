@@ -4,16 +4,54 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Elimine codigo muerto">
+    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="Update de mis metodos">
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/BuscarEscaneoPorFechaDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/FechaTraduccionesHoyDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/PagoMetodoDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/PagoRecaudacionDto.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/EscaneoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/EscaneoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/GlosarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/GlosarioController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/LenguajeProgramacionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/LenguajeProgramacionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/PagoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/PagoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/TraduccionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/TraduccionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/UsuarioController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/UsuarioController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/BuscarLenguajeFrecuenteDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/MostrarLenguajeFrecuenteDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/BuscarTraduccionesUltimoMesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/MostrarTraduccionesUltimoMesDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/ConteoMasDiezLenguajesDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/CantidadMasDiezLenguajesDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/ConteoTraduccionYPalabrasDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/CantidadTraduccionYPalabrasDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/FrecuenciaPalabrasDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/MostrarFrecuenciaPalabrasDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/RolesUsuariosDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/RolesUsuariosDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/IEscaneoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/IEscaneoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/IPagoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/IPagoRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ITraduccionRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/ITraduccionRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/EscaneoServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/EscaneoServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/PagoServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/PagoServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/TraduccionServiceImplement.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/TraduccionServiceImplement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/IEscaneoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/IEscaneoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/IPagoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/IPagoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/ITraduccionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/ITraduccionService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/EscaneoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/EscaneoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/GlosarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/GlosarioController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/LenguajeProgramacionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/LenguajeProgramacionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/TraduccionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/TraduccionController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/UsuarioController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/UsuarioController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/LenguajeProgramacionServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/LenguajeProgramacionServiceImplement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/INotificacionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/INotificacionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/BuscarLenguajeFrecuenteDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/BuscarTraduccionesUltimoMesDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/ConteoMasDiezLenguajesDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/ConteoTraduccionYPalabrasDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/FrecuenciaPalabrasDto.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/RolesUsuariosDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/RolesUsuariosDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/IEscaneoRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/IEscaneoRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ILenguajeProgramacionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ITraduccionRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/ITraduccionRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/EscaneoServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/EscaneoServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/TraduccionServiceImplement.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/TraduccionServiceImplement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/IEscaneoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/IEscaneoService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/ITraduccionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/ITraduccionService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +166,9 @@
       <workItem from="1746866120019" duration="366000" />
       <workItem from="1746866524245" duration="6443000" />
       <workItem from="1746906368355" duration="5912000" />
-      <workItem from="1747002854472" duration="2720000" />
+      <workItem from="1747002854472" duration="5447000" />
+      <workItem from="1747164919339" duration="7000" />
+      <workItem from="1747200291141" duration="7222000" />
     </task>
     <task id="LOCAL-00001" summary="Añadi tablas Notificacion, LenguajeProgramacion, Compartir">
       <option name="closed" value="true" />
@@ -250,7 +290,15 @@
       <option name="project" value="LOCAL" />
       <updated>1746913420075</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Update de mis metodos">
+      <option name="closed" value="true" />
+      <created>1747005689289</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1747005689290</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -279,6 +327,7 @@
     <MESSAGE value="Agregue mis querys" />
     <MESSAGE value="Actualice mis querys por completo" />
     <MESSAGE value="Elimine codigo muerto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Elimine codigo muerto" />
+    <MESSAGE value="Update de mis metodos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update de mis metodos" />
   </component>
 </project>

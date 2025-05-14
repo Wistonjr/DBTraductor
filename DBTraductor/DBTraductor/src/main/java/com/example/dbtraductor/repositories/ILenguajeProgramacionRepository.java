@@ -23,9 +23,8 @@ public interface ILenguajeProgramacionRepository extends JpaRepository<LenguajeP
             " JOIN " +
             "    Lenguaje_Programacion lp ON t.id_lenguaje_programacion = lp.id_lenguaje_programacion " +
             " GROUP BY " +
-            "    lp.nombre " +  // Es importante agrupar por lp.nombre
+            "    lp.nombre " +
             " ORDER BY " +
-            "    total_traducciones DESC " +
-            " LIMIT 1", nativeQuery = true)
+            "    total_traducciones DESC ", nativeQuery = true)
     public List<String[]> buscarLenguajeFrecuente();
 }

@@ -1,5 +1,7 @@
 package com.example.dbtraductor.controllers;
 
+import com.example.dbtraductor.dtos.BuscarEscaneoPorFechaDto;
+import com.example.dbtraductor.dtos.FechaTraduccionesHoyDto;
 import com.example.dbtraductor.dtos.TraduccionDto;
 import com.example.dbtraductor.entities.Traduccion;
 import com.example.dbtraductor.servicesinterfaces.ITraduccionService;
@@ -7,6 +9,8 @@ import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -46,4 +50,17 @@ public class TraduccionController {
 
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
+
+    @GetMapping("/listarTraduccionHoy")
+    public List<FechaTraduccionesHoyDto> listarTraduccionHoy() {
+        List<String[]> filaLista=aS.mostrarTraduccionesHoy();
+        List<FechaTraduccionesHoyDto> dtoLista=new ArrayList<>();
+        for(String[] columna:filaLista){
+            FechaTraduccionesHoyDto dto=new FechaTraduccionesHoyDto();
+            dto.setIdTraduccion(Integer.parseInt(columna[0]));
+            dto.setFechaTraduccion(LocalDate.parse(columna[1]));
+            dtoLista.add(dto);
+        }
+        return dtoLista;
+    }
 }

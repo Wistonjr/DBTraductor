@@ -1,6 +1,6 @@
 package com.example.dbtraductor.controllers;
 
-import com.example.dbtraductor.dtos.BuscarTraduccionesUltimoMesDto;
+import com.example.dbtraductor.dtos.MostrarTraduccionesUltimoMesDto;
 import com.example.dbtraductor.dtos.CantidadTraduccionesComparXMetodoEnvioDto;
 import com.example.dbtraductor.dtos.CompartirDto;
 import com.example.dbtraductor.entities.Compartir;
@@ -65,11 +65,11 @@ public class CompartirController {
     }
 
     @GetMapping("/listarTraduccionesCompartidosUltimoMes")
-    public List<BuscarTraduccionesUltimoMesDto> listarTraduccionesCompartidosUltimoMes() {
+    public List<MostrarTraduccionesUltimoMesDto> listarTraduccionesCompartidosUltimoMes() {
         List<String[]> filaLista=cS.buscarTraduccionesCompartidosUltimomes(LocalDate.now());
-        List<BuscarTraduccionesUltimoMesDto> dtoLista=new ArrayList<>();
+        List<MostrarTraduccionesUltimoMesDto> dtoLista=new ArrayList<>();
         for(String[] columna:filaLista){
-            BuscarTraduccionesUltimoMesDto dto=new BuscarTraduccionesUltimoMesDto();
+            MostrarTraduccionesUltimoMesDto dto=new MostrarTraduccionesUltimoMesDto();
             dto.setIdTraduccion(Integer.parseInt(columna[0]));
             dto.setMetodoEnvio(columna[1]);
             dto.setFechaEnvio(LocalDate.parse(columna[2]));

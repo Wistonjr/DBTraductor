@@ -1,7 +1,7 @@
 package com.example.dbtraductor.controllers;
 
-import com.example.dbtraductor.dtos.BuscarLenguajeFrecuenteDto;
-import com.example.dbtraductor.dtos.ConteoMasDiezLenguajesDto;
+import com.example.dbtraductor.dtos.MostrarLenguajeFrecuenteDto;
+import com.example.dbtraductor.dtos.CantidadMasDiezLenguajesDto;
 import com.example.dbtraductor.dtos.LenguajeProgramacionDto;
 import com.example.dbtraductor.entities.LenguajeProgramacion;
 import com.example.dbtraductor.servicesinterfaces.ILenguajeProgramacionService;
@@ -51,11 +51,11 @@ public class LenguajeProgramacionController {
     public void eliminar(@PathVariable("id") int id) {lP.delete(id);}
 
     @GetMapping("/listarLenguajeFrecuente")
-    public List<BuscarLenguajeFrecuenteDto> listarLenguajeFrecuente() {
+    public List<MostrarLenguajeFrecuenteDto> listarLenguajeFrecuente() {
         List<String[]> filaLista=lP.buscarLenguajeFrecuente();
-        List<BuscarLenguajeFrecuenteDto> dtoLista=new ArrayList<>();
+        List<MostrarLenguajeFrecuenteDto> dtoLista=new ArrayList<>();
         for(String[] columna:filaLista){
-            BuscarLenguajeFrecuenteDto dto=new BuscarLenguajeFrecuenteDto();
+            MostrarLenguajeFrecuenteDto dto=new MostrarLenguajeFrecuenteDto();
             dto.setNombre(columna[0]);
             dto.setTotalTraducciones(Integer.parseInt(columna[1]));
             dtoLista.add(dto);
@@ -64,11 +64,11 @@ public class LenguajeProgramacionController {
     }
 
     @GetMapping("/cantidadMasDiezLenguajes")
-    public List<ConteoMasDiezLenguajesDto> listarCantidadMasDiezLenguajes() {
+    public List<CantidadMasDiezLenguajesDto> listarCantidadMasDiezLenguajes() {
         List<String[]> filaLista=lP.conteoConMasDiezLenguajes();
-        List<ConteoMasDiezLenguajesDto> dtoLista=new ArrayList<>();
+        List<CantidadMasDiezLenguajesDto> dtoLista=new ArrayList<>();
         for(String[] columna:filaLista){
-            ConteoMasDiezLenguajesDto dto=new ConteoMasDiezLenguajesDto();
+            CantidadMasDiezLenguajesDto dto=new CantidadMasDiezLenguajesDto();
             dto.setTipo(columna[0]);
             dto.setCantidadLenguajes(Integer.parseInt(columna[1]));
             dtoLista.add(dto);

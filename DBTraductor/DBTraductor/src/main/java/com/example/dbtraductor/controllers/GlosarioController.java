@@ -50,11 +50,11 @@ public class GlosarioController {
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 
     @GetMapping("/palabrasMasFrecuentes")
-    public List<FrecuenciaPalabrasDto> listarFrecuenciaPalabras() {
+    public List<MostrarFrecuenciaPalabrasDto> listarFrecuenciaPalabras() {
         List<String[]> filaLista=aS.frecuenciaPalabrasGlosario();
-        List<FrecuenciaPalabrasDto> dtoLista=new ArrayList<>();
+        List<MostrarFrecuenciaPalabrasDto> dtoLista=new ArrayList<>();
         for(String[] columna:filaLista){
-            FrecuenciaPalabrasDto dto=new FrecuenciaPalabrasDto();
+            MostrarFrecuenciaPalabrasDto dto=new MostrarFrecuenciaPalabrasDto();
             dto.setDescripcion(columna[0]);
             dto.setCantidadPalabras(Integer.parseInt(columna[1]));
             dtoLista.add(dto);
@@ -63,11 +63,11 @@ public class GlosarioController {
     }
 
     @GetMapping("/cantidadTraduccionYPalabrasXDescripcion")
-    public List<ConteoTraduccionYPalabrasDto> listarCantidadTraduccionYPalabrasXDescripcion() {
+    public List<CantidadTraduccionYPalabrasDto> listarCantidadTraduccionYPalabrasXDescripcion() {
         List<String[]> filaLista=aS.conteoTraduccionYPalabrasPorDescripcion();
-        List<ConteoTraduccionYPalabrasDto> dtoLista=new ArrayList<>();
+        List<CantidadTraduccionYPalabrasDto> dtoLista=new ArrayList<>();
         for(String[] columna:filaLista){
-            ConteoTraduccionYPalabrasDto dto=new ConteoTraduccionYPalabrasDto();
+            CantidadTraduccionYPalabrasDto dto=new CantidadTraduccionYPalabrasDto();
             dto.setDescripcion(columna[0]);
             dto.setCantidadTraducciones(Integer.parseInt(columna[1]));
             dtoLista.add(dto);

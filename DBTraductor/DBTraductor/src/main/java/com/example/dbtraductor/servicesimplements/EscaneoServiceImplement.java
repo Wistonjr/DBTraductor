@@ -6,6 +6,7 @@ import com.example.dbtraductor.servicesinterfaces.IEscaneoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -38,4 +39,6 @@ public class EscaneoServiceImplement implements IEscaneoService {
     public void delete(int id) {
         re.deleteById(id);
     }
+    @Override
+    public List<Escaneo> findByFechaEscaneo(LocalDate fecha){return re.findByFechaEscaneo(fecha);}
 }

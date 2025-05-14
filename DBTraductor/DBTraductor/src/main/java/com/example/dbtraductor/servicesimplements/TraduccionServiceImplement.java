@@ -38,4 +38,6 @@ public class TraduccionServiceImplement implements ITraduccionService {
     public void delete(int id) {
         re.deleteById(id);
     }
+    @Override
+    public List<String[]> mostrarTraduccionesHoy(){return re.mostrarTraduccionesHoy();}
 }

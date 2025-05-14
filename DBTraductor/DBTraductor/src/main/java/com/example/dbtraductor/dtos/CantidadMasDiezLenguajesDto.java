@@ -1,6 +1,6 @@
 package com.example.dbtraductor.dtos;
 
-public class ConteoMasDiezLenguajesDto {
+public class CantidadMasDiezLenguajesDto {
     private String tipo;
     private int cantidadLenguajes;
 
