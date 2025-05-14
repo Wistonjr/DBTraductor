@@ -7,6 +7,7 @@ import com.example.dbtraductor.entities.Compartir;
 import com.example.dbtraductor.servicesinterfaces.ICompartirService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -20,6 +21,7 @@ public class CompartirController {
     @Autowired
     private ICompartirService cS;
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<CompartirDto> listar() {
         return cS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -28,6 +30,7 @@ public class CompartirController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody CompartirDto dto) {
         ModelMapper m = new ModelMapper();
         Compartir c = m.map(dto, Compartir.class);
@@ -35,6 +38,7 @@ public class CompartirController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public CompartirDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         CompartirDto dto=m.map(id, CompartirDto.class);
@@ -42,6 +46,7 @@ public class CompartirController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody CompartirDto dto) {
         ModelMapper m = new ModelMapper();
         Compartir c = m.map(dto, Compartir.class);
@@ -49,9 +54,11 @@ public class CompartirController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {cS.delete(id);}
 
     @GetMapping("/cantidadTraduccionesCompartidasXMetodoEnvio")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<CantidadTraduccionesComparXMetodoEnvioDto> listarCantidadTraduccionesCompartidasXMetodoEnvio() {
         List<String[]> filaLista=cS.cantidadTraduccionesCompartidasXMetodoEnvio();
         List<CantidadTraduccionesComparXMetodoEnvioDto> dtoLista=new ArrayList<>();
@@ -65,6 +72,7 @@ public class CompartirController {
     }
 
     @GetMapping("/listarTraduccionesCompartidosUltimoMes")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<MostrarTraduccionesUltimoMesDto> listarTraduccionesCompartidosUltimoMes() {
         List<String[]> filaLista=cS.buscarTraduccionesCompartidosUltimomes(LocalDate.now());
         List<MostrarTraduccionesUltimoMesDto> dtoLista=new ArrayList<>();

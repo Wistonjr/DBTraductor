@@ -4,6 +4,7 @@ import com.example.dbtraductor.entities.FeedBack;
 import com.example.dbtraductor.servicesinterfaces.IFeedBackService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,6 +17,7 @@ public class FeedbackController {
     private IFeedBackService aS;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<FeedBackDto> listar() {
         return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -24,6 +26,7 @@ public class FeedbackController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody FeedBackDto dto) {
         ModelMapper m = new ModelMapper();
         FeedBack a = m.map(dto, FeedBack.class);
@@ -31,6 +34,7 @@ public class FeedbackController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public FeedBackDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         FeedBackDto dto = m.map(aS.searchId(id), FeedBackDto.class);
@@ -38,6 +42,7 @@ public class FeedbackController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody FeedBackDto dto) {
         ModelMapper m = new ModelMapper();
         FeedBack a = m.map(dto, FeedBack.class);
@@ -45,5 +50,6 @@ public class FeedbackController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 }

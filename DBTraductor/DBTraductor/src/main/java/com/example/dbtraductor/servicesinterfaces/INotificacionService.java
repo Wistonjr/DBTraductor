@@ -10,4 +10,5 @@ public interface INotificacionService {
     public Notificacion searchId(int id);
     public void update (Notificacion n);
     public void delete (int id);
+    public List<String[]> DiezprimerasnoficacionesByApp();
 }

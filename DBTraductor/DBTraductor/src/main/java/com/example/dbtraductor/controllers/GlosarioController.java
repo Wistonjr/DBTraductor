@@ -5,6 +5,7 @@ import com.example.dbtraductor.entities.Glosario;
 import com.example.dbtraductor.servicesinterfaces.IGlosarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -18,6 +19,7 @@ public class GlosarioController {
     private IGlosarioService aS;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<GlosarioDto> listar() {
         return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -26,6 +28,7 @@ public class GlosarioController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody GlosarioDto dto) {
         ModelMapper m = new ModelMapper();
         Glosario a = m.map(dto, Glosario.class);
@@ -33,6 +36,7 @@ public class GlosarioController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public GlosarioDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         GlosarioDto dto = m.map(aS.searchId(id), GlosarioDto.class);
@@ -40,6 +44,7 @@ public class GlosarioController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody GlosarioDto dto) {
         ModelMapper m = new ModelMapper();
         Glosario a = m.map(dto, Glosario.class);
@@ -47,9 +52,11 @@ public class GlosarioController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 
     @GetMapping("/palabrasMasFrecuentes")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<MostrarFrecuenciaPalabrasDto> listarFrecuenciaPalabras() {
         List<String[]> filaLista=aS.frecuenciaPalabrasGlosario();
         List<MostrarFrecuenciaPalabrasDto> dtoLista=new ArrayList<>();
@@ -63,6 +70,7 @@ public class GlosarioController {
     }
 
     @GetMapping("/cantidadTraduccionYPalabrasXDescripcion")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<CantidadTraduccionYPalabrasDto> listarCantidadTraduccionYPalabrasXDescripcion() {
         List<String[]> filaLista=aS.conteoTraduccionYPalabrasPorDescripcion();
         List<CantidadTraduccionYPalabrasDto> dtoLista=new ArrayList<>();

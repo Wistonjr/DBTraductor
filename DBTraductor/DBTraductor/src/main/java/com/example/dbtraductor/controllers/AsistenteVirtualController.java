@@ -6,6 +6,7 @@ import com.example.dbtraductor.servicesimplements.UsuarioServiceImplement;
 import com.example.dbtraductor.servicesinterfaces.IAsistenteVirtualService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -20,6 +21,7 @@ public class AsistenteVirtualController {
     private UsuarioServiceImplement userService;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<AsistenteVirtualDto> listar() {
         return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -28,6 +30,7 @@ public class AsistenteVirtualController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody AsistenteVirtualDto dto) {
         ModelMapper m = new ModelMapper();
         AsistenteVirtual a = m.map(dto, AsistenteVirtual.class);
@@ -35,6 +38,7 @@ public class AsistenteVirtualController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public AsistenteVirtualDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         AsistenteVirtualDto dto = m.map(aS.searchId(id), AsistenteVirtualDto.class);
@@ -42,6 +46,7 @@ public class AsistenteVirtualController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody AsistenteVirtualDto dto) {
         ModelMapper m = new ModelMapper();
         AsistenteVirtual a = m.map(dto, AsistenteVirtual.class);
@@ -49,5 +54,6 @@ public class AsistenteVirtualController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 }

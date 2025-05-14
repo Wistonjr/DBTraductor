@@ -21,6 +21,7 @@ public class RolController {
     private IRolService rS;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<RolDto> listar(){
         return rS.list().stream().map(p->{
             ModelMapper m = new ModelMapper();
@@ -29,6 +30,7 @@ public class RolController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void registrar(@RequestBody RolDto dto){
         ModelMapper m = new ModelMapper();
         Rol l= m.map(dto, Rol.class);
@@ -36,6 +38,7 @@ public class RolController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody RolDto dto){
         ModelMapper m = new ModelMapper();
         Rol l= m.map(dto, Rol.class);
@@ -43,12 +46,14 @@ public class RolController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable ("id") Long id){
         rS.delete(id);
     }
 
 //subido al main
-    @GetMapping("/usuarios")
+   /* @GetMapping("/usuarios")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<RolDto> ListarCantidadModeradores(){
         List<String[]> filaLista=rS.QuantityModeradoresByApp();
         List<RolDto> dtoLista = new ArrayList<>();
@@ -61,5 +66,5 @@ public class RolController {
         return dtoLista;
 
     }
-
+    */
 }

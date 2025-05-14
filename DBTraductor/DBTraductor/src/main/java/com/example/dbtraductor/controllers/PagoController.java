@@ -6,6 +6,7 @@ import com.example.dbtraductor.entities.Pago;
 import com.example.dbtraductor.servicesinterfaces.IPagoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -20,6 +21,7 @@ public class PagoController {
     private IPagoService aS;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<PagoDto> listar() {
         return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -28,6 +30,7 @@ public class PagoController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody PagoDto dto) {
         ModelMapper m = new ModelMapper();
         Pago a = m.map(dto, Pago.class);
@@ -36,6 +39,7 @@ public class PagoController {
 
     /*search id */
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public PagoDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         PagoDto dto = m.map(aS.searchId(id), PagoDto.class);
@@ -43,6 +47,7 @@ public class PagoController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody PagoDto dto) {
         ModelMapper m = new ModelMapper();
         Pago a = m.map(dto, Pago.class);
@@ -50,9 +55,11 @@ public class PagoController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 
     @GetMapping("/recaudaciones/{fecha}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<PagoRecaudacionDto> listarRecaudacion(@PathVariable("fecha") String fecha) {
         List<String[]> filaLista = aS.getTotal();
         List<PagoRecaudacionDto> dtoLista = new ArrayList<>();
@@ -69,6 +76,7 @@ public class PagoController {
         return dtoLista;
     }
     @GetMapping("/metodos")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<PagoMetodoDto> listarmetodosmonto(){
         List<String[]> filaLista=aS.getTotalMetodo();
         List<PagoMetodoDto> dtoLista=new ArrayList<>();

@@ -7,6 +7,7 @@ import com.example.dbtraductor.entities.Traduccion;
 import com.example.dbtraductor.servicesinterfaces.ITraduccionService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -21,6 +22,7 @@ public class TraduccionController {
     private ITraduccionService aS;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<TraduccionDto> listar() {
         return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -29,12 +31,14 @@ public class TraduccionController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody TraduccionDto dto) {
         ModelMapper m = new ModelMapper();
         Traduccion a = m.map(dto, Traduccion.class);
         aS.insert(a);
     }
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public TraduccionDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         TraduccionDto dto = m.map(aS.searchId(id), TraduccionDto.class);
@@ -42,6 +46,7 @@ public class TraduccionController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody TraduccionDto dto) {
         ModelMapper m = new ModelMapper();
         Traduccion a = m.map(dto, Traduccion.class);
@@ -49,9 +54,11 @@ public class TraduccionController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 
     @GetMapping("/listarTraduccionHoy")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<FechaTraduccionesHoyDto> listarTraduccionHoy() {
         List<String[]> filaLista=aS.mostrarTraduccionesHoy();
         List<FechaTraduccionesHoyDto> dtoLista=new ArrayList<>();

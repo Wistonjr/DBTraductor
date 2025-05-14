@@ -11,7 +11,7 @@ public class UsuarioDto {
     private LocalDate fechaNacimiento;
     private String email;
     private String password;
-    private Rol idRol;
+    private String username;
 
     public int getIdUsuario() {
         return idUsuario;
@@ -61,11 +61,11 @@ public class UsuarioDto {
         this.password = password;
     }
 
-    public Rol getIdRol() {
-        return idRol;
+    public String getUsername() {
+        return username;
     }
 
-    public void setIdRol(Rol idRol) {
-        this.idRol = idRol;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

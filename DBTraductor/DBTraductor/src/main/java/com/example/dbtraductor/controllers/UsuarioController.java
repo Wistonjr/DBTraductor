@@ -23,8 +23,9 @@ public class UsuarioController {
     @Autowired
     private PasswordEncoder passwordEncoder;
 
-    @PreAuthorize("hasAuthority('ADMIN')")
+
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<UsuarioDto> listar() {
         return uS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -32,8 +33,9 @@ public class UsuarioController {
         }).collect(Collectors.toList());
     }
 
-    @PreAuthorize("hasAuthority('ADMIN')")
+
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody UsuarioDto dto) {
         ModelMapper m = new ModelMapper();
         Usuario a = m.map(dto, Usuario.class);
@@ -42,28 +44,35 @@ public class UsuarioController {
         uS.insert(a);
     }
 
-    @PreAuthorize("hasAuthority('ADMIN')")
-    @GetMapping("/{id}")
-    public UsuarioDto listarId(@PathVariable("id") int id) {
-        ModelMapper m = new ModelMapper();
-        UsuarioDto dto = m.map(uS.searchId(id), UsuarioDto.class);
-        return dto;
-    }
 
-    @PreAuthorize("hasAuthority('ADMIN')")
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody UsuarioDto dto) {
         ModelMapper m = new ModelMapper();
         Usuario a = m.map(dto, Usuario.class);
         uS.update(a);
     }
 
+
+
+    @GetMapping("/{id}")
     @PreAuthorize("hasAuthority('ADMIN')")
+    public UsuarioDto listarId(@PathVariable("id") int id) {
+        ModelMapper m = new ModelMapper();
+        UsuarioDto dto = m.map(uS.searchId(id), UsuarioDto.class);
+        return dto;
+    }
+
+
+
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {uS.delete(id);}
 
-    @PreAuthorize("hasAuthority('ADMIN')")
+
+    /*
     @GetMapping("/roles")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<RolesUsuariosDto>  RolesUsuarios(){
         List<String[]>filaLista = uS.RolesUsuarios();
         List<RolesUsuariosDto> dtoRoles = new ArrayList<>();
@@ -74,5 +83,6 @@ public class UsuarioController {
             dtoRoles.add(dto);
         }
         return dtoRoles;
-    }
+    }*/
+
 }

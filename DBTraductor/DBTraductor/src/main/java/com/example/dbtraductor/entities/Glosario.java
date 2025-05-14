@@ -12,7 +12,7 @@ public class Glosario {
     private String palabra;
     @Column(name = "descripcion", nullable = false, length = 400)
     private String descripcion;
-    @OneToOne
+    @ManyToOne
     @JoinColumn(name ="idTraduccion")
     private Traduccion idTraduccion;
 

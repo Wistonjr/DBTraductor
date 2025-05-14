@@ -5,6 +5,7 @@ import com.example.dbtraductor.entities.Escaneo;
 import com.example.dbtraductor.servicesinterfaces.IEscaneoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -18,6 +19,7 @@ public class EscaneoController {
     private IEscaneoService aS;
 
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<EscaneoDto> listar() {
         return aS.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -26,6 +28,7 @@ public class EscaneoController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody EscaneoDto dto) {
         ModelMapper m = new ModelMapper();
         Escaneo a = m.map(dto, Escaneo.class);
@@ -33,6 +36,7 @@ public class EscaneoController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public EscaneoDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         EscaneoDto dto = m.map(aS.searchId(id), EscaneoDto.class);
@@ -40,6 +44,7 @@ public class EscaneoController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody EscaneoDto dto) {
         ModelMapper m = new ModelMapper();
         Escaneo a = m.map(dto, Escaneo.class);
@@ -47,9 +52,11 @@ public class EscaneoController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {aS.delete(id);}
 
     @GetMapping("/fecha")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<BuscarEscaneoPorFechaDto> buscarEscaneoPorFecha(@RequestParam LocalDate fecha) {
         return aS.findByFechaEscaneo(fecha).stream().map(p -> {
             ModelMapper m = new ModelMapper();

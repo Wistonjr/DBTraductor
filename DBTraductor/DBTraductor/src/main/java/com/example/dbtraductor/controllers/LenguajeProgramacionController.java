@@ -7,6 +7,7 @@ import com.example.dbtraductor.entities.LenguajeProgramacion;
 import com.example.dbtraductor.servicesinterfaces.ILenguajeProgramacionService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -18,7 +19,9 @@ import java.util.stream.Collectors;
 public class LenguajeProgramacionController {
     @Autowired
     private ILenguajeProgramacionService lP;
+
     @GetMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<LenguajeProgramacionDto> listar() {
         return lP.list().stream().map( x -> {
             ModelMapper m = new ModelMapper();
@@ -27,6 +30,7 @@ public class LenguajeProgramacionController {
     }
 
     @PostMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void insertar(@RequestBody LenguajeProgramacionDto dto) {
         ModelMapper m = new ModelMapper();
         LenguajeProgramacion c = m.map(dto, LenguajeProgramacion.class);
@@ -34,6 +38,7 @@ public class LenguajeProgramacionController {
     }
 
     @GetMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public LenguajeProgramacionDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         LenguajeProgramacionDto dto = m.map(lP.searchId(id), LenguajeProgramacionDto.class);
@@ -41,6 +46,7 @@ public class LenguajeProgramacionController {
     }
 
     @PutMapping
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void modificar(@RequestBody LenguajeProgramacionDto dto) {
         ModelMapper m = new ModelMapper();
         LenguajeProgramacion c = m.map(dto, LenguajeProgramacion.class);
@@ -48,9 +54,11 @@ public class LenguajeProgramacionController {
     }
 
     @DeleteMapping("/{id}")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public void eliminar(@PathVariable("id") int id) {lP.delete(id);}
 
     @GetMapping("/listarLenguajeFrecuente")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<MostrarLenguajeFrecuenteDto> listarLenguajeFrecuente() {
         List<String[]> filaLista=lP.buscarLenguajeFrecuente();
         List<MostrarLenguajeFrecuenteDto> dtoLista=new ArrayList<>();
@@ -64,6 +72,7 @@ public class LenguajeProgramacionController {
     }
 
     @GetMapping("/cantidadMasDiezLenguajes")
+    @PreAuthorize("hasAuthority('ADMIN')")
     public List<CantidadMasDiezLenguajesDto> listarCantidadMasDiezLenguajes() {
         List<String[]> filaLista=lP.conteoConMasDiezLenguajes();
         List<CantidadMasDiezLenguajesDto> dtoLista=new ArrayList<>();

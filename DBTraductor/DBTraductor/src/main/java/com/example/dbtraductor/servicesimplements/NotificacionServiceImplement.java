@@ -36,4 +36,9 @@ public class NotificacionServiceImplement implements INotificacionService {
     public void delete(int id) {
         nR.deleteById(id);
     }
+
+    @Override
+    public List<String[]> DiezprimerasnoficacionesByApp() {
+        return nR.DiezprimerasnoficacionesByApp();
+    }
 }
