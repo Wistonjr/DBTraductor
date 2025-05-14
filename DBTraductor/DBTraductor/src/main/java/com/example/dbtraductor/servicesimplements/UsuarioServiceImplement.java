@@ -33,4 +33,8 @@ public class UsuarioServiceImplement implements IUsuarioService {
     public List<String[]> RolesUsuarios() {return re.RolesUsuarios();
     }
 
+    public int getUserIdFromUsername(String username) {
+        Usuario usuario = re.findOneByUsername(username);
+        return usuario != null ? usuario.getIdUsuario() : -1; // Retorna -1 si no se encuentra el usuario
+    }
 }

@@ -5,6 +5,7 @@ import com.example.dbtraductor.entities.Rol;
 import com.example.dbtraductor.servicesinterfaces.IRolService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -13,6 +14,7 @@ import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping("/roles")
+@PreAuthorize("hasAuthority('ADMIN')")
 public class RolController {
 
     @Autowired
@@ -27,11 +29,24 @@ public class RolController {
     }
 
     @PostMapping
-    public void insertar(@RequestBody RolDto dto){
+    public void registrar(@RequestBody RolDto dto){
         ModelMapper m = new ModelMapper();
         Rol l= m.map(dto, Rol.class);
         rS.insert(l);
     }
+
+    @PutMapping
+    public void modificar(@RequestBody RolDto dto){
+        ModelMapper m = new ModelMapper();
+        Rol l= m.map(dto, Rol.class);
+        rS.update(l);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminar(@PathVariable ("id") Long id){
+        rS.delete(id);
+    }
+
 //subido al main
     @GetMapping("/usuarios")
     public List<RolDto> ListarCantidadModeradores(){

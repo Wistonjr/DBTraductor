@@ -9,8 +9,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-public
-class RolServiceImplement implements IRolService {
+public class RolServiceImplement implements IRolService {
 
     @Autowired
     private IRolRepository re;
@@ -21,6 +20,12 @@ class RolServiceImplement implements IRolService {
     @Override
     public void insert(Rol rol) {re.save(rol);
     }
+
+    @Override
+    public void update(Rol r){re.save(r);}
+
+    @Override
+    public void delete(Long id){re.deleteById(id);}
 
     @Override
     public List<String[]> QuantityModeradoresByApp() { return re.QuantityModeradoresByApp();

@@ -3,28 +3,49 @@ package com.example.dbtraductor.entities;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name="Rol")
+@Table(name="Rol",uniqueConstraints = {@UniqueConstraint(columnNames = {"user_id", "rol"})})
 public class Rol {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int idRol;
+    private Long idRol;
     @Column(name="rolName", nullable=false,length=30)
     private String rolName;
 
-    public Rol(int idRol, String rolName) {
-        this.idRol = idRol;
-        this.rolName = rolName;
-    }
+    @ManyToOne
+    @JoinColumn(name = "id_user", nullable = false)
+    private Usuario user;
 
     public Rol() {
     }
 
-    public int getIdRol() {return idRol;}
+    public Rol(Long idRol, String rolName, Usuario user) {
+        this.idRol = idRol;
+        this.rolName = rolName;
+        this.user = user;
+    }
 
-    public void setIdRol(int idRol) {this.idRol = idRol;}
+    public Long getIdRol() {
+        return idRol;
+    }
 
-    public String getRolName() {return rolName;}
+    public void setIdRol(Long idRol) {
+        this.idRol = idRol;
+    }
 
-    public void setRolName(String rolName) {this.rolName = rolName;}
+    public String getRolName() {
+        return rolName;
+    }
+
+    public void setRolName(String rolName) {
+        this.rolName = rolName;
+    }
+
+    public Usuario getUser() {
+        return user;
+    }
+
+    public void setUser(Usuario user) {
+        this.user = user;
+    }
 }

@@ -2,6 +2,7 @@ package com.example.dbtraductor.controllers;
 
 import com.example.dbtraductor.dtos.AsistenteVirtualDto;
 import com.example.dbtraductor.entities.AsistenteVirtual;
+import com.example.dbtraductor.servicesimplements.UsuarioServiceImplement;
 import com.example.dbtraductor.servicesinterfaces.IAsistenteVirtualService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,6 +16,9 @@ import java.util.stream.Collectors;
 public class AsistenteVirtualController {
     @Autowired
     private IAsistenteVirtualService aS;
+    @Autowired
+    private UsuarioServiceImplement userService;
+
     @GetMapping
     public List<AsistenteVirtualDto> listar() {
         return aS.list().stream().map( x -> {

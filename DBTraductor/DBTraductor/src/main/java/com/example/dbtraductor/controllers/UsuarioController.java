@@ -6,6 +6,8 @@ import com.example.dbtraductor.entities.Usuario;
 import com.example.dbtraductor.servicesinterfaces.IUsuarioService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
@@ -18,7 +20,10 @@ import java.util.stream.Collectors;
 public class UsuarioController {
     @Autowired
     private IUsuarioService uS;
+    @Autowired
+    private PasswordEncoder passwordEncoder;
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping
     public List<UsuarioDto> listar() {
         return uS.list().stream().map( x -> {
@@ -27,13 +32,17 @@ public class UsuarioController {
         }).collect(Collectors.toList());
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PostMapping
     public void insertar(@RequestBody UsuarioDto dto) {
         ModelMapper m = new ModelMapper();
         Usuario a = m.map(dto, Usuario.class);
+        String encodedPassword = passwordEncoder.encode(a.getPassword());
+        a.setPassword(encodedPassword);
         uS.insert(a);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/{id}")
     public UsuarioDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
@@ -41,6 +50,7 @@ public class UsuarioController {
         return dto;
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @PutMapping
     public void modificar(@RequestBody UsuarioDto dto) {
         ModelMapper m = new ModelMapper();
@@ -48,9 +58,11 @@ public class UsuarioController {
         uS.update(a);
     }
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @DeleteMapping("/{id}")
     public void eliminar(@PathVariable("id") int id) {uS.delete(id);}
 
+    @PreAuthorize("hasAuthority('ADMIN')")
     @GetMapping("/roles")
     public List<RolesUsuariosDto>  RolesUsuarios(){
         List<String[]>filaLista = uS.RolesUsuarios();

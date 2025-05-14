@@ -1,12 +1,16 @@
 package com.example.dbtraductor.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 
+import java.io.Serializable;
 import java.time.LocalDate;
+import java.util.List;
+
 @Entity
 @Table(name="Usuario")
-public class Usuario {
+public class Usuario implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -24,25 +28,30 @@ public class Usuario {
     @Column(name = "email", nullable = false, length = 30)
     private String email;
 
-    @Column(name = "password", nullable = false, length = 30)
+    @Column(name="username",nullable = false,length = 30)
+    private String username;
+    @Column(length = 200)
     private String password;
+    private Boolean enabled;
 
-    @ManyToOne
-    @JoinColumn(name = "idRol")
-    private Rol idRol;
+    @JsonIgnore
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL,mappedBy = "user")
+    private List<Rol> roles;
 
-    public Usuario(int idUsuario, String nombre, int telefono, LocalDate fechaNacimiento, String email, String password, Rol idRol) {
+    public Usuario() {
+
+    }
+
+    public Usuario(int idUsuario, String nombre, int telefono, LocalDate fechaNacimiento, String email, String username, String password, Boolean enabled, List<Rol> roles) {
         this.idUsuario = idUsuario;
         this.nombre = nombre;
         this.telefono = telefono;
         this.fechaNacimiento = fechaNacimiento;
         this.email = email;
+        this.username = username;
         this.password = password;
-        this.idRol = idRol;
-    }
-
-    public Usuario() {
-
+        this.enabled = enabled;
+        this.roles = roles;
     }
 
     public int getIdUsuario() {
@@ -85,6 +94,14 @@ public class Usuario {
         this.email = email;
     }
 
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
     public String getPassword() {
         return password;
     }
@@ -93,11 +110,19 @@ public class Usuario {
         this.password = password;
     }
 
-    public Rol getIdRol() {
-        return idRol;
+    public Boolean getEnabled() {
+        return enabled;
     }
 
-    public void setIdRol(Rol idRol) {
-        this.idRol = idRol;
+    public void setEnabled(Boolean enabled) {
+        this.enabled = enabled;
+    }
+
+    public List<Rol> getRoles() {
+        return roles;
+    }
+
+    public void setRoles(List<Rol> roles) {
+        this.roles = roles;
     }
 }
