@@ -1,6 +1,6 @@
 package com.example.dbtraductor.dtos;
 
-import com.example.dbtraductor.entities.Usuario;
+import com.example.dbtraductor.entities.Users;
 
 import java.time.LocalDate;
 
@@ -11,7 +11,7 @@ public class SuscripcionDto {
     private LocalDate fechaInicio;
     private LocalDate fechaFin;
     private String historial;
-    private Usuario idUsuario;
+    private Users idUsuario;
 
     public int getIdSuscripcion() {
         return idSuscripcion;
@@ -61,11 +61,11 @@ public class SuscripcionDto {
         this.historial = historial;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 }

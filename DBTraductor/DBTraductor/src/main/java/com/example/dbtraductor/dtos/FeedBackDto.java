@@ -1,7 +1,7 @@
 package com.example.dbtraductor.dtos;
 
 import com.example.dbtraductor.entities.Traduccion;
-import com.example.dbtraductor.entities.Usuario;
+import com.example.dbtraductor.entities.Users;
 
 import java.time.LocalDate;
 
@@ -10,7 +10,7 @@ public class FeedBackDto {
     private String comentario;
     private int calificacion;
     private LocalDate fecha;
-    private Usuario idUsuario;
+    private Users idUsuario;
     private Traduccion idTraduccion;
 
     public int getIdFeedBack() {
@@ -45,11 +45,11 @@ public class FeedBackDto {
         this.fecha = fecha;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 

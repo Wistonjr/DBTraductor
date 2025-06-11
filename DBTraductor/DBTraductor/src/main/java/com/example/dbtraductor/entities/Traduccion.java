@@ -19,7 +19,7 @@ public class Traduccion {
     private LocalDate fechaTraduccion;
     @ManyToOne
     @JoinColumn(name ="idUsuario")
-    private Usuario idUsuario;
+    private Users idUsuario;
     @ManyToOne
     @JoinColumn(name ="idEscaneo")
     private Escaneo idEscaneo;
@@ -29,7 +29,7 @@ public class Traduccion {
 
     public Traduccion() {}
 
-    public Traduccion(int idTraduccion, String codigoOriginal, String codigoTraducido, LocalDate fechaTraduccion, Usuario idUsuario, Escaneo idEscaneo, LenguajeProgramacion idLenguajeProgramacion) {
+    public Traduccion(int idTraduccion, String codigoOriginal, String codigoTraducido, LocalDate fechaTraduccion, Users idUsuario, Escaneo idEscaneo, LenguajeProgramacion idLenguajeProgramacion) {
         this.idTraduccion = idTraduccion;
         this.codigoOriginal = codigoOriginal;
         this.codigoTraducido = codigoTraducido;
@@ -71,11 +71,11 @@ public class Traduccion {
         this.fechaTraduccion = fechaTraduccion;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 

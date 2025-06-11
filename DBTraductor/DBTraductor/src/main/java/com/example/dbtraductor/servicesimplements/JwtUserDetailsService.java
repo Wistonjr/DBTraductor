@@ -1,7 +1,7 @@
 package com.example.dbtraductor.servicesimplements;
 
-import com.example.dbtraductor.entities.Usuario;
-import com.example.dbtraductor.repositories.IUsuarioRepository;
+import com.example.dbtraductor.entities.Users;
+import com.example.dbtraductor.repositories.IUserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -15,13 +15,13 @@ import java.util.List;
 
 @Service
 public class JwtUserDetailsService implements UserDetailsService {
-    @Autowired
-    private IUsuarioRepository repo;
 
+    @Autowired
+    private IUserRepository repo;
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        Usuario user = repo.findOneByUsername(username);
+        Users user = repo.findOneByUsername(username);
 
         if (user == null) {
             throw new UsernameNotFoundException(String.format("User not exists", username));
@@ -30,7 +30,7 @@ public class JwtUserDetailsService implements UserDetailsService {
         List<GrantedAuthority> roles = new ArrayList<>();
 
         user.getRoles().forEach(rol -> {
-            roles.add(new SimpleGrantedAuthority(rol.getRolName()));
+            roles.add(new SimpleGrantedAuthority(rol.getRol()));
         });
 
         UserDetails ud = new org.springframework.security.core.userdetails.User(user.getUsername(), user.getPassword(), user.getEnabled(), true, true, true, roles);

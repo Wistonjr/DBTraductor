@@ -10,14 +10,14 @@ public class Escaneo {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int idEscaneo;
     @Lob
-    @Column(name="imagen", nullable=true)
-    private byte[] imagen;
+    @Column(name="imagen", nullable=true,length=200)
+    private String imagen;
     @Column(name="fechaEscaneo", nullable=false)
     private LocalDate fechaEscaneo;
 
     @ManyToOne
     @JoinColumn(name ="idUsuario")
-    private Usuario idUsuario;
+    private Users idUsuario;
     @ManyToOne
     @JoinColumn(name ="idAsistenteVirtual")
     private AsistenteVirtual idAsistenteVirtual;
@@ -25,7 +25,7 @@ public class Escaneo {
     public Escaneo() {
     }
 
-    public Escaneo(int idEscaneo, byte[] imagen, LocalDate fechaEscaneo, Usuario idUsuario, AsistenteVirtual idAsistenteVirtual, Traduccion idTraduccion) {
+    public Escaneo(int idEscaneo, String imagen, LocalDate fechaEscaneo, Users idUsuario, AsistenteVirtual idAsistenteVirtual, Traduccion idTraduccion) {
         this.idEscaneo = idEscaneo;
         this.imagen = imagen;
         this.fechaEscaneo = fechaEscaneo;
@@ -41,11 +41,11 @@ public class Escaneo {
         this.idEscaneo = idEscaneo;
     }
 
-    public byte[] getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 
@@ -57,11 +57,11 @@ public class Escaneo {
         this.fechaEscaneo = fechaEscaneo;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 

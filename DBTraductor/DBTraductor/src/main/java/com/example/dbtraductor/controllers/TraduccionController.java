@@ -1,6 +1,5 @@
 package com.example.dbtraductor.controllers;
 
-import com.example.dbtraductor.dtos.BuscarEscaneoPorFechaDto;
 import com.example.dbtraductor.dtos.FechaTraduccionesHoyDto;
 import com.example.dbtraductor.dtos.TraduccionDto;
 import com.example.dbtraductor.entities.Traduccion;

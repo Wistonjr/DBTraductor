@@ -21,9 +21,9 @@ public class Suscripcion {
     private String historial;
     @ManyToOne
     @JoinColumn(name ="idUsuario")
-    private Usuario idUsuario;
+    private Users idUsuario;
 
-    public Suscripcion(int idSuscripcion, String tipo, String estado, LocalDate fechaInicio, LocalDate fechaFin, String historial, Usuario idUsuario) {
+    public Suscripcion(int idSuscripcion, String tipo, String estado, LocalDate fechaInicio, LocalDate fechaFin, String historial, Users idUsuario) {
         this.idSuscripcion = idSuscripcion;
         this.tipo = tipo;
         this.estado = estado;
@@ -85,11 +85,11 @@ public class Suscripcion {
         this.historial = historial;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 }

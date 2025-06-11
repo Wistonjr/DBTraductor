@@ -2,7 +2,7 @@ package com.example.dbtraductor.dtos;
 
 import com.example.dbtraductor.entities.Escaneo;
 import com.example.dbtraductor.entities.LenguajeProgramacion;
-import com.example.dbtraductor.entities.Usuario;
+import com.example.dbtraductor.entities.Users;
 
 import java.time.LocalDate;
 
@@ -11,7 +11,7 @@ public class TraduccionDto {
     private String codigoOriginal;
     private String codigoTraducido;
     private LocalDate fechaTraduccion;
-    private Usuario idUsuario;
+    private Users idUsuario;
     private Escaneo idEscaneo;
     private LenguajeProgramacion idLenguajeProgramacion;
 
@@ -47,11 +47,11 @@ public class TraduccionDto {
         this.fechaTraduccion = fechaTraduccion;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 

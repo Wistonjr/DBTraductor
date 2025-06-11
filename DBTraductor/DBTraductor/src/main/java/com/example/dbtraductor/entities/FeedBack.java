@@ -17,7 +17,7 @@ public class FeedBack {
     private LocalDate fecha;
     @ManyToOne
     @JoinColumn(name ="idUsuario")
-    private Usuario idUsuario;
+    private Users idUsuario;
     @ManyToOne
     @JoinColumn(name ="idTraduccion")
     private Traduccion idTraduccion;
@@ -25,7 +25,7 @@ public class FeedBack {
     public FeedBack() {
     }
 
-    public FeedBack(int idFeedBack, String comentario, int calificacion, LocalDate fecha, Usuario idUsuario, Traduccion idTraduccion) {
+    public FeedBack(int idFeedBack, String comentario, int calificacion, LocalDate fecha, Users idUsuario, Traduccion idTraduccion) {
         this.idFeedBack = idFeedBack;
         this.comentario = comentario;
         this.calificacion = calificacion;
@@ -66,11 +66,11 @@ public class FeedBack {
         this.fecha = fecha;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 

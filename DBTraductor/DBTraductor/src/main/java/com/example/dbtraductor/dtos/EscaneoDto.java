@@ -2,15 +2,15 @@ package com.example.dbtraductor.dtos;
 
 import com.example.dbtraductor.entities.AsistenteVirtual;
 import com.example.dbtraductor.entities.Traduccion;
-import com.example.dbtraductor.entities.Usuario;
+import com.example.dbtraductor.entities.Users;
 
 import java.time.LocalDate;
 
 public class EscaneoDto {
     private int idEscaneo;
-    private byte[] imagen;
+    private String imagen;
     private LocalDate fechaEscaneo;
-    private Usuario idUsuario;
+    private Users idUsuario;
     private AsistenteVirtual idAsistenteVirtual;
     private Traduccion idTraduccion;
 
@@ -22,11 +22,11 @@ public class EscaneoDto {
         this.idEscaneo = idEscaneo;
     }
 
-    public byte[] getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 
@@ -38,11 +38,11 @@ public class EscaneoDto {
         this.fechaEscaneo = fechaEscaneo;
     }
 
-    public Usuario getIdUsuario() {
+    public Users getIdUsuario() {
         return idUsuario;
     }
 
-    public void setIdUsuario(Usuario idUsuario) {
+    public void setIdUsuario(Users idUsuario) {
         this.idUsuario = idUsuario;
     }
 

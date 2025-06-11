@@ -3,7 +3,7 @@ package com.example.dbtraductor.dtos;
 public class BuscarEscaneoPorFechaDto {
     private int id;
     private String fecha;
-    private byte[] imagen;
+    private String imagen;
 
     public int getId() {
         return id;
@@ -21,11 +21,11 @@ public class BuscarEscaneoPorFechaDto {
         this.fecha = fecha;
     }
 
-    public byte[] getImagen() {
+    public String getImagen() {
         return imagen;
     }
 
-    public void setImagen(byte[] imagen) {
+    public void setImagen(String imagen) {
         this.imagen = imagen;
     }
 }
