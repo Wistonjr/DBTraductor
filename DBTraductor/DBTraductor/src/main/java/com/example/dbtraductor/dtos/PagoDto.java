@@ -9,7 +9,7 @@ public class PagoDto {
     private float monto;
     private String metodo;
     private LocalDate fechaPago;
-    private String estado;
+    private boolean estado;
     private Suscripcion idSuscripcion;
 
     public int getIdPago() {
@@ -44,11 +44,11 @@ public class PagoDto {
         this.fechaPago = fechaPago;
     }
 
-    public String getEstado() {
+    public boolean isEstado() {
         return estado;
     }
 
-    public void setEstado(String estado) {
+    public void setEstado(boolean estado) {
         this.estado = estado;
     }
 

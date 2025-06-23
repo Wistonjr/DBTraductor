@@ -16,17 +16,17 @@ public class Pago {
     @Column(name="fechaPago", nullable=false)
     private LocalDate fechaPago;
     @Column(name="estado", nullable=false,length=20)
-    private String estado;
+    private boolean estado;
     @ManyToOne
     @JoinColumn(name ="idSuscripcion")
     private Suscripcion idSuscripcion;
 
-    public Pago(int idPago, float monto, String metodo, LocalDate fechaPago, String estado, Suscripcion idSuscripcion) {
+    public Pago(int idPago, float monto, String metodo, LocalDate fechaPago, Boolean estado, Suscripcion idSuscripcion) {
         this.idPago = idPago;
         this.monto = monto;
         this.metodo = metodo;
         this.fechaPago = fechaPago;
-        this.estado = estado;
+       this.estado= estado;
         this.idSuscripcion = idSuscripcion;
     }
 
@@ -66,12 +66,10 @@ public class Pago {
         this.fechaPago = fechaPago;
     }
 
-    public String getEstado() {
-        return estado;
+    public boolean isEstado() { return estado;
     }
 
-    public void setEstado(String estado) {
-        this.estado = estado;
+    public void setEstado(boolean estado) {this.estado = estado;
     }
 
     public Suscripcion getIdSuscripcion() {

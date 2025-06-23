@@ -33,7 +33,7 @@ public class EscaneoController {
     }
 
     @GetMapping("/{id}")
-    public EscaneoDto listarId(@PathVariable("id") int id) {
+    public EscaneoDto buscarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();
         EscaneoDto dto = m.map(aS.searchId(id), EscaneoDto.class);
         return dto;

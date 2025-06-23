@@ -34,6 +34,7 @@ public class CompartirController {
         cS.insert(c);
     }
 
+
     @GetMapping("/{id}")
     public CompartirDto listarId(@PathVariable("id") int id) {
         ModelMapper m = new ModelMapper();

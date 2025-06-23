@@ -4,82 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="swagger">
-      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Users.java" afterDir="false" />
+    <list default="true" id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="backend-actualizado">
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/UsersController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/UsersDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/UsersServiceImplement.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/IUsersService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/SwaggerConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/AsistenteVirtualController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/AsistenteVirtualController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/JwtAuthenticationController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/NotificacionController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/RolController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/TraduccionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/TraduccionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/UsuarioController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/BuscarEscaneoPorFechaDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/BuscarEscaneoPorFechaDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/EscaneoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/EscaneoDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/FeedBackDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/FeedBackDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/NotificacionDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/RolDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/RolesUsuariosDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/SuscripcionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/SuscripcionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/TraduccionDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/TraduccionDto.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/UsuarioDto.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Escaneo.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Escaneo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/FeedBack.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/FeedBack.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Notificacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Rol.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Suscripcion.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Suscripcion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Traduccion.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Traduccion.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Usuario.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/INotificacionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/IRolRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/IUsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/repositories/IUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/securities/JwtAuthenticationEntryPoint.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/securities/JwtRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/securities/JwtRequestFilter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/securities/JwtResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/securities/JwtTokenUtil.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/securities/WebSecurityConfig.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/JwtUserDetailsService.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/JwtUserDetailsService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/NotificacionServiceImplement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/RolServiceImplement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/UsuarioServiceImplement.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/INotificacionService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/IRolService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesinterfaces/IUsuarioService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/CompartirController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/EscaneoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/controllers/EscaneoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/PagoDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/dtos/PagoDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Pago.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Pago.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Users.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/entities/Users.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/servicesimplements/JwtUserDetailsService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/util/CORS.java" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/java/com/example/dbtraductor/util/CORS.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/AsistenteVirtualController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/AsistenteVirtualController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/NotificacionController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/RolController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/TraduccionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/TraduccionController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/UsuarioController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/EscaneoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/EscaneoDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/FeedBackDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/FeedBackDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/NotificacionDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/RolDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/RolesUsuariosDTO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/SuscripcionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/SuscripcionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/TraduccionDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/TraduccionDto.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/UsuarioDto.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Escaneo.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Escaneo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/FeedBack.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/FeedBack.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Notificacion.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Rol.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Suscripcion.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Suscripcion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Traduccion.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Traduccion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Usuario.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/INotificacionRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/IRolRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/repositories/IUsuarioRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/NotificacionServiceImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/RolServiceImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/UsuarioServiceImplement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/INotificacionService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/IRolService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesinterfaces/IUsuarioService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/CompartirController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/EscaneoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/controllers/EscaneoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/PagoDto.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/dtos/PagoDto.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Pago.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Pago.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Role.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Role.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Users.class" beforeDir="false" afterPath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/entities/Users.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DBTraductor/DBTraductor/target/classes/com/example/dbtraductor/servicesimplements/JwtUserDetailsService.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +48,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="gabriel" />
+        <entry key="$PROJECT_DIR$" value="main" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -109,43 +59,45 @@
     &quot;assignee&quot;: &quot;Gbel18&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Wistonjr/DBTraductor.git&quot;,
-    &quot;accountId&quot;: &quot;fb6153f6-bc22-41a2-baf6-b9d046b16ef0&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/Wistonjr/DBTraductor.git",
+    "accountId": "d6e093ee-288c-4024-a69b-cb4b98406a3a"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 6
 }</component>
   <component name="ProjectId" id="2wpNHhYWCMJB1JygNZPwwBc5R0f" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;Spring Boot.DbTraductorApplication.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;gabriel&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "Spring Boot.DbTraductorApplication.executor": "Run",
+    "git-widget-placeholder": "gabriel",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/demo3165API",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="gabriel" />
@@ -173,11 +125,12 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-fbdcb00ec9e3-intellij.indexing.shared.core-IU-251.23774.435" />
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-IU-251.23774.435" />
+        <option value="bundled-jdk-9823dce3aa75-a94e463ab2e7-intellij.indexing.shared.core-IU-243.26053.27" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-IU-243.26053.27" />
       </set>
     </attachedChunks>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d1c234d1-b06d-4393-8f5e-9047c0f3c28d" name="Changes" comment="" />
@@ -201,6 +154,7 @@
       <workItem from="1747267116063" duration="13000" />
       <workItem from="1749620195315" duration="321000" />
       <workItem from="1749643478555" duration="10206000" />
+      <workItem from="1750384691559" duration="24622000" />
     </task>
     <task id="LOCAL-00001" summary="Añadi tablas Notificacion, LenguajeProgramacion, Compartir">
       <option name="closed" value="true" />
@@ -346,7 +300,15 @@
       <option name="project" value="LOCAL" />
       <updated>1747254803663</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="backend-actualizado">
+      <option name="closed" value="true" />
+      <created>1750652906533</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1750652906533</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,6 +340,7 @@
     <MESSAGE value="Update de mis metodos" />
     <MESSAGE value="Agregue las querys de Sheyla y Pedro a mi branch" />
     <MESSAGE value="swagger" />
-    <option name="LAST_COMMIT_MESSAGE" value="swagger" />
+    <MESSAGE value="backend-actualizado" />
+    <option name="LAST_COMMIT_MESSAGE" value="backend-actualizado" />
   </component>
 </project>

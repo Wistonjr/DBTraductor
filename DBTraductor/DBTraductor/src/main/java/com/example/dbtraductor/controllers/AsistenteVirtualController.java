@@ -2,7 +2,6 @@ package com.example.dbtraductor.controllers;
 
 import com.example.dbtraductor.dtos.AsistenteVirtualDto;
 import com.example.dbtraductor.entities.AsistenteVirtual;
-import com.example.dbtraductor.servicesimplements.JwtUserDetailsService;
 import com.example.dbtraductor.servicesinterfaces.IAsistenteVirtualService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,6 @@ public class AsistenteVirtualController {
     @Autowired
     private IAsistenteVirtualService aS;
     @Autowired
-    private JwtUserDetailsService userService;
 
     @GetMapping
     public List<AsistenteVirtualDto> listar() {
@@ -27,7 +25,7 @@ public class AsistenteVirtualController {
         }).collect(Collectors.toList());
     }
 
-    @PostMapping
+    @PutMapping
     public void insertar(@RequestBody AsistenteVirtualDto dto) {
         ModelMapper m = new ModelMapper();
         AsistenteVirtual a = m.map(dto, AsistenteVirtual.class);
@@ -41,7 +39,7 @@ public class AsistenteVirtualController {
         return dto;
     }
 
-    @PutMapping
+    @PostMapping
     public void modificar(@RequestBody AsistenteVirtualDto dto) {
         ModelMapper m = new ModelMapper();
         AsistenteVirtual a = m.map(dto, AsistenteVirtual.class);
