@@ -2,9 +2,11 @@ package com.example.dbtraductor.controllers;
 import com.example.dbtraductor.dtos.BuscarEscaneoPorFechaDto;
 import com.example.dbtraductor.dtos.EscaneoDto;
 import com.example.dbtraductor.entities.Escaneo;
+import com.example.dbtraductor.repositories.IEscaneoRepository;
 import com.example.dbtraductor.servicesinterfaces.IEscaneoService;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
@@ -16,6 +18,8 @@ import java.util.stream.Collectors;
 public class EscaneoController {
     @Autowired
     private IEscaneoService aS;
+    @Autowired
+    private IEscaneoRepository iEscaneoRepository;
 
     @GetMapping
     public List<EscaneoDto> listar() {
@@ -56,4 +60,10 @@ public class EscaneoController {
             return m.map(p, BuscarEscaneoPorFechaDto.class);
         }).collect(Collectors.toList());
     }
+    @PostMapping("/escaneo")
+    public ResponseEntity<String> registrarEscaneo(@RequestBody Escaneo escaneo) {
+        iEscaneoRepository.save(escaneo);
+        return ResponseEntity.ok("Imagen guardada");
+    }
+
 }
